@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         Krunker.io Hacks Cheats Mods 2019 - Working - (sandbox-unblocked)
-// @description  Krunker io Mods Features: Show FPS, Aim Fire, Auto Bunny, ESP, Faster Speed, Higher Jump, Better Movement
+// @name         Krunker.io AIMBOT - Krunkerio Hacks - Best Krunker Cheat 2019
+// @description  Krunker io Mods Features: Show FPS, Aim Fire, Auto Bunny, ESP, Adblock, Change Background
 // @namespace    iomods.org
 // @author       iomods.org
-// @version      1.2
+// @version      1.3
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @updateURL    https://iomods.org/mods/krunkerio.user.js
 // @downloadURL  https://iomods.org/mods/krunkerio.user.js
