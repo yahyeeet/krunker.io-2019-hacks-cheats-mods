@@ -3,7 +3,7 @@
 // @description  Krunker io Mods Features: Show FPS, Aim Fire, Auto Bunny, ESP, Adblock, Change Background
 // @namespace    iomods.org
 // @author       iomods.org
-// @version      1.6
+// @version      1.6.1
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @updateURL    https://iomods.org/mods/krunkerio.user.js
 // @downloadURL  https://iomods.org/mods/krunkerio.user.js
@@ -11,7 +11,6 @@
 // @match        *iogames.space/*
 // @match        *titotu.io/*
 // @match        *io-games.io/*
-// @include      /^(https?:\/\/)?(www\.)?(.+)krunker\.io(|\/|\/\?(server|party)=.+)$/
 // @grant        GM_xmlhttpRequest
 // @require http://code.jquery.com/jquery-3.3.1.min.js
 // @require https://code.jquery.com/ui/1.12.0/jquery-ui.min.js
