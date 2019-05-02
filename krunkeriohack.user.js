@@ -3,7 +3,7 @@
 // @description  Krunker io Mods Features: Show FPS, Aim Fire, Auto Bunny, ESP, Adblock, Change Background
 // @namespace    iomods.org
 // @author       iomods.org
-// @version      1.5
+// @version      1.6
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @updateURL    https://iomods.org/mods/krunkerio.user.js
 // @downloadURL  https://iomods.org/mods/krunkerio.user.js
@@ -99,7 +99,7 @@ class Aimbot extends Module {
             }
         }
         if (!isLockedOn) {
-            this.control.camLookAt(null);
+            this.control.zqrU(null);
             this.control.target = null;
             if (this.getCurrentMode() === AimbotMode.Quickscoper) {
                 this.control.mouseDownL = 0;
@@ -142,7 +142,7 @@ class Aimbot extends Module {
         return true;
     }
     lookAt(target) {
-        this.control.camLookAt(target.x2, target.y2 + target.height - 1.5 - 2.5 * target.crouchVal - this.me.recoilAnimY * 0.3 * 25, target.z2);
+        this.control.zqrU(target.x2, target.y2 + target.height - 1.5 - 2.5 * target.crouchVal - this.me.recoilAnimY * 0.3 * 25, target.z2);
     }
     distance(player1, player2) {
         const dx = player1.x - player2.x;
@@ -283,7 +283,7 @@ class Krunkbot {
       `;
         });
         infoBox.innerHTML = `
-      <div class="krunkbotTitle">Krunkerio.org</div>
+      <div class="krunkbotTitle">Krunkbot</div>
       ${moduleLines.join('')}
     `.trim();
     }
@@ -411,7 +411,7 @@ function patchOnKeyPressed(script) {
     });
 }
 function patchForAimbot(script) {
-    return applyPatch(script, 'patchForAimbot', /{if\(this\.target\){(.+)}},this.camLookAt=/, ($0, $1) => {
+    return applyPatch(script, 'patchForAimbot', /{if\(this\.target\){(.+)}},this.zqrU=/, ($0, $1) => {
         return `
       {
         if (this.target) {
@@ -426,7 +426,7 @@ function patchForAimbot(script) {
           
           ${$1}
         }
-      }, this.camLookAt =
+      }, this.zqrU =
     `;
     });
 }
@@ -537,7 +537,7 @@ window.zipExt = "";
 
 GM_xmlhttpRequest({
     method: "GET",
-    url: `https://krunker.io/js/game.kQzKQ.js?build=kQzKQ`,
+    url: `https://krunker.io/js/game.vdkS3.js?build=vdkS3`,
     onload: inres => {
         window.gameCode = inres.responseText
         GM_xmlhttpRequest({
