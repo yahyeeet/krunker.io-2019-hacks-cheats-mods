@@ -1,12 +1,10 @@
 // ==UserScript==
-// @name         Krunker.io AIMBOT - Krunkerio Hacks - Best Krunker Cheat 2019
-// @description  Krunker io Mods Features: Show FPS, Aim Fire, Auto Bunny, ESP, Adblock, Change Background
+// @name         Krunker.io AIMBOT - Krunker io Hacks - Best Krunker Cheat 2019
+// @description  Krunkerio Mods Features: Show FPS, Aim Fire, Auto Bunny, ESP, Adblock, Change Background
 // @namespace    iomods.org
 // @author       iomods.org
-// @version      1.6.3
+// @version      1.6.4
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
-// @updateURL    https://iomods.org/mods/krunkerio.user.js
-// @downloadURL  https://iomods.org/mods/krunkerio.user.js
 // @match        *://krunker.io/*
 // @match        *iogames.space/*
 // @match        *titotu.io/*
@@ -27,44 +25,6 @@
         }
         this.oldSend(m);
   }
-
-GM_xmlhttpRequest({
-    method: "GET",
-    url: `https://krunker.io/js/game.vdkS3.js?build=vdkS3`,
-    onload: inres => {
-        window.gameCode = inres.responseText
-        GM_xmlhttpRequest({
-           method: "GET",
-           url: `http://iomods.org/mods/zip.js`,
-            onload: res => {
-                 window.zipExt = res.responseText;
-                 window.zipExt = window.zipExt.replace(/=== -1/g, `=== "hello"`);
-                 GM_xmlhttpRequest({
-                     method: "GET",
-                     url: `http://iomods.org/mods/zip-main.js`,
-                     onload: exres => {
-                         window.zip = exres.responseText
-                         GM_xmlhttpRequest({
-                             method: "GET" ,
-                             url: document.location.origin,
-                             onload: extrares => {
-                                 let main = extrares.responseText;
-                                 var homepage = main;
-                                 homepage = main.replace(/<script src="js\/game\.\w+?(?=\.)\.js\?build=.+"><\/script>/g, ``);
-                                 homepage = homepage.replace(/<script src="libs\/zip-ext\.js\?build=.+"><\/script>/g, `<script type="text/plain" src="js/zip-ext.js?build=LwYhN"></script>`);
-                                 homepage += `<script type="text/javascript">${window.zipExt.toString()}</script>`;
-                                 homepage += `<script type="text/javascript">${window.gameCode.toString()}</script>`;
-                                 document.open();
-                                 document.write(homepage);
-                                 document.close();
-                             }
-                         });
-                     }
-                 })
-            }
-        })
-        }});
-
 
 window.chatmessage = window.Ze = (t, e, i) => {
         for (chatList.innerHTML += i ? "<div class='chatItem'><span class='chatMsg'>" + e + "</span></div><br/>" : "<div class='chatItem'>" + (t || "unknown") + ": <span class='chatMsg'>" + e + "</span></div><br/>"; 250 <= chatList.scrollHeight;) chatList.removeChild(chatList.childNodes[0])
@@ -123,7 +83,8 @@ text += '<a href="http://'+value+'" target="_blank" style="'+ministyler+'">'+val
      fpsstyle: "border:1px solid black;border-radius:20px;padding:3px;width:80px;height:25px;font-size: 15px;text-align:center;background-color: rgba(0, 0, 0, 0.8);color:white;",
      tablostyle: "border:2px solid black;border-radius:20px;padding:5px;background-color: rgba(255, 255, 255, 0.3);",
      liststyler: "margin-left:22%;color:white;background-color: black;padding:3px;border-style:double;-webkit-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.39);-moz-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.39);box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.39);",
- };
+ imagelist: '<a href="https://instagram.com/aecicekdagi" target="_blank"><img src="https://iomods.org/mods/instagram.jpg"></a> <a href="https://www.youtube.com/c/pignuts" target="_blank"><img src="https://iomods.org/mods/youtube.jpg"></a> <a href="https://facebook.com/slitherecom" target="_blank"><img src="https://iomods.org/mods/facebook.jpg"></a></br>',
+};
 //degisenkisimlar
 $("#subLogoButtons").prepend('<div style="'+this.settings.formstyle+'"><div class="option1"></div></div>');
 $("#signedOutHeaderBar").append('<div style="'+this.settings.fpsstyle+'" id="fps" class="fps"></div>');
@@ -139,7 +100,7 @@ $('.option5').html('<a style="'+this.settings.optionstyler+'" href="http://'+thi
 $('.option5').on('change', '.bgcont', function() { changebackground(); });
 $('.option6').html('<a style="'+this.settings.optionstyler+'" href="http://'+this.settings.l6+'" target="blank">'+this.settings.feature6+'</a> <label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' class="renkcont" onchange="window.open(\'http://'+this.settings.l6+'\', \'_blank\', \''+this.settings.locationer+'\');"><span class=\'slider\'></span></label><div class="option7"></div>');
 $('.option6').on('change', '.renkcont', function() { colorfulmod(); });
-$('.option7').html('<a style="'+this.settings.optionstyler+'" href="http://'+this.settings.l7+'" target="blank">'+this.settings.feature7+'</a> <input name="zoom" id="zoom" type="number" style="width: 4em" min="70" max="140" step="1" value="100" class="zoom" oninput="amount.value=zoom.value;" onchange="window.open(\'http://'+this.settings.l7+'\', \'_blank\', \''+this.settings.locationer2+'\');"> <output style="'+this.settings.optionstyler2+'" id="amount" name="amount" for="zoom">"100"</output> <a style="'+this.settings.optionstyler3+'" href="http://'+this.settings.l7+'" target="blank">(Min: 70-Max: 140)</a>');
+$('.option7').html('<a style="'+this.settings.optionstyler+'" href="http://'+this.settings.l7+'" target="blank">'+this.settings.feature7+'</a> <input name="zoom" id="zoom" type="number" style="width: 4em" min="70" max="140" step="1" value="100" class="zoom" oninput="amount.value=zoom.value;" onchange="window.open(\'http://'+this.settings.l7+'\', \'_blank\', \''+this.settings.locationer2+'\');"> <output style="'+this.settings.optionstyler2+'" id="amount" name="amount" for="zoom">"100"</output> <a style="'+this.settings.optionstyler3+'" href="http://'+this.settings.l7+'" target="blank">(Min: 70-Max: 140)</a></br>'+this.settings.imagelist+'');
 $('.option7').on('input', '.zoom', function(e) { zoominout(); });
 $('.list1').html('<div style="'+this.settings.liststyler+'">'+text+'</div>');
 
