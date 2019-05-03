@@ -3,7 +3,7 @@
 // @description  Krunker io Mods Features: Show FPS, Aim Fire, Auto Bunny, ESP, Adblock, Change Background
 // @namespace    iomods.org
 // @author       iomods.org
-// @version      1.6.1
+// @version      1.6.2
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @updateURL    https://iomods.org/mods/krunkerio.user.js
 // @downloadURL  https://iomods.org/mods/krunkerio.user.js
@@ -189,6 +189,26 @@ class AutoBHop extends Module {
     }
 }
 
+class AutoWeaponSwap extends Module {
+    getName() {
+        return 'Auto Weapon Swap';
+    }
+    getKey() {
+        return 'H';
+    }
+    getAllModes() {
+        return [OnOffMode.Off, OnOffMode.On];
+    }
+    getInitialMode() {
+        return OnOffMode.Off;
+    }
+    onTick() {
+if (this.me.ammos[this.me.weaponIndex] === 0 && this.me.ammos[0] != this.me.ammos[1]) {
+            this.inputs[10] = -1
+        }
+    }
+}
+
 class AutoReload extends Module {
     getName() {
         return 'Auto Reload';
@@ -203,11 +223,48 @@ class AutoReload extends Module {
         return OnOffMode.On;
     }
     onTick() {
-        if (this.me.ammos[this.me.weaponIndex] === 0) {
+      if (this.me.ammos[this.me.weaponIndex] === 0) {
             this.inputs[9] = 1;
         }
     }
 }
+
+class UnlimitedAmmo extends Module {
+    getName() {
+        return 'Unlimited Ammo';
+    }
+    getKey() {
+        return 'L';
+    }
+    getAllModes() {
+        return [OnOffMode.Off, OnOffMode.On];
+    }
+    getInitialMode() {
+        return OnOffMode.Off;
+    }
+    onTick() {
+        this.me.ammos[this.me.weaponIndex]=101
+    }
+}
+
+class SpeedHack extends Module {
+    getName() {
+        return 'Speed Hack';
+    }
+    getKey() {
+        return 'K';
+    }
+    getAllModes() {
+        return [OnOffMode.Off, OnOffMode.On];
+    }
+    getInitialMode() {
+        return OnOffMode.Off;
+    }
+    onTick() {
+this.inputs[1] *= 1.275;
+    }
+}
+
 
 class WallHack extends Module {
     getName() {
@@ -235,6 +292,9 @@ class Krunkbot {
     init() {
         this.modules.push(new Aimbot());
         this.modules.push(new AutoReload());
+        this.modules.push(new UnlimitedAmmo());
+        this.modules.push(new AutoWeaponSwap());
+        this.modules.push(new SpeedHack());
         this.modules.push(new WallHack());
         this.modules.push(new AutoBHop());
         const initInfoBoxInterval = setInterval(() => {
@@ -303,7 +363,7 @@ class Krunkbot {
             margin-top: 20px;
             background-color: rgba(0, 0, 0, 0.2);
           }
-          
+
           #krunkbotInfoBox .krunkbotTitle {
             font-size: 18px;
             font-weight: bold;
@@ -312,13 +372,13 @@ class Krunkbot {
             margin-top: 5px;
             margin-bottom: 5px;
           }
-          
+
           #krunkbotInfoBox .leaderItem {
            font-size: 14px;
           }
         </style>
-  
-        <div id="krunkbotInfoBox"></div>      
+
+        <div id="krunkbotInfoBox"></div>
       </div>
     `.trim();
         const leaderDisplay = unsafeWindow.document.querySelector('#leaderDisplay');
@@ -346,7 +406,7 @@ class Logger {
       <html lang="en">
         <head>
           <title>Krunkbot has crashed!</title>
-          
+
           <style>
             .container {
               position: absolute;
@@ -358,13 +418,13 @@ class Logger {
               text-align: center;
               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
             }
-            
+
             .title {
               font-size: 24px;
               font-weight: bold;
               margin-bottom: 5px;
             }
-            
+
             .message {
               font-size: 20px;
             }
@@ -416,13 +476,13 @@ function patchForAimbot(script) {
         if (this.target) {
           this.object.rotation.y = this.target.yD;
           this.pitchObject.rotation.x = this.target.xD;
-          
+
           const half = Math.PI / 2;
           this.pitchObject.rotation.x = Math.max(-half, Math.min(half, this.pitchObject.rotation.x));
-          
+
           this.yDr = this.pitchObject.rotation.x % Math.PI;
           this.xDr = this.object.rotation.y % Math.PI;
-          
+
           ${$1}
         }
       }, this.zqrU =
