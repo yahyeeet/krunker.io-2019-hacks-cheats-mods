@@ -9,7 +9,7 @@ It helps you to play with extra features and when you visit the game, buttons wi
 <li>Adblock Plus+</li></ul>
 <b>Private Settings For Krunker.io Mod:</b>
 Rainbow Game, Colorful Game Play, FPS, Adblock</br>
-I Key: Aimbot (Quickscopper,Triggerbot,On RMB,Hip Fire)
+I Key: Aimbot (Quickscopper,Triggerbot,On RMB,Hip Fire)</br>
 B Key: Bhop (Jump, Slide Jump)</br>
 J Key: Auto Reload</br>
 L Key: Unlimited Ammo</br>
