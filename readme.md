@@ -8,7 +8,15 @@ It helps you to play with extra features and when you visit the game, buttons wi
 <li>Show FPS ON/OFF</li>
 <li>Adblock Plus+</li></ul>
 <b>Private Settings For Krunker.io Mod:</b>
-Rainbow Game, Colorful Game Play, ESP, Bunny Hop, Auto Aim, in Game FPS Counter, Anti Lag
+Rainbow Game, Colorful Game Play, FPS, Adblock</br>
+B Key: Bhop (Jump, Slide Jump)</br>
+J Key: Auto Reload</br>
+L Key: Unlimited Ammo</br>
+K Key: Auto Weapon Swap</br>
+G Key: No Recoil</br>
+K Key: Speed Hack</br>
+O Key: Wall Hack</br>
+I Key: Aimbot (Quickscopper,Triggerbot,On RMB,Hip Fire)
 
 <h3>How to Install</h3>
 <h4>Step 1:</h4>
