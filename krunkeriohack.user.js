@@ -3,7 +3,7 @@
 // @description  Krunkerio Mods Features: Show FPS, Aim Fire, Auto Bunny, ESP, Adblock, Change Background
 // @namespace    iomods.org
 // @author       iomods.org
-// @version      1.6.4
+// @version      1.7
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @match        *://krunker.io/*
 // @match        *iogames.space/*
@@ -34,73 +34,95 @@ window.chatmessage = window.Ze = (t, e, i) => {
     window.socket = socket;
     checkgameloaded = socket;
 
-    window.chatmessage("Krunkerio.org", `Welcome to Krunkerio.net! Press <span style="color: green;">'i'</span> to toggle <span style="color: green;">autoaim</span>, <span style="color: purple;">'b'</span> to toggle <span style="color: purple;">bhop</span>, <span style="color: yellow;">'o'</span> to toggle <span style="color: yellow;">wallhack</span> and <span style="color: green;">'j'</span> to toggle <span style="color: green;">auto reload</span>!`);
+    window.chatmessage("Krunkerio.org", `Welcome to <span style="color: red;">Krunkerio.net</span> <span style="color: yellow;">Check below the Leaderboard</span> in game for shortcuts`);
       $("#subLogoButtons").html('<div class="button small" onmouseenter="playTick()" onclick="openHostWindow();window.open(\'https://goo.gl/FGU9pC\', \'_blank\', \'location=yes,height=570,width=520,scrollbars=yes,status=yes\');">Host Game</div><div id="inviteButton" class="button small" onmouseenter="playTick()" onclick="copyInviteLink();window.open(\'https://goo.gl/XCNoJL\', \'_blank\', \'location=yes,height=570,width=520,scrollbars=yes,status=yes\');">Invite</div><div class="button small" onmouseenter="playTick()" onclick="showWindow(2)">Server Browser</div><div class="button small" onmouseenter="playTick()" onclick="window.open(\'https://goo.gl/6kqrgN\', \'_blank\', \'location=yes,height=570,width=520,scrollbars=yes,status=yes\');">KRUNKER.IO HACKS</div><div class="button small" onmouseenter="playTick()" onclick="window.open(\'https://goo.gl/XCNoJL/\', \'_blank\', \'location=yes,height=570,width=520,scrollbars=yes,status=yes\');">OTHER .IO CHEATS</div>');
-      $("#signedOutHeaderBar").append('</br><a style=\"color:orange;\" href="https://goo.gl/XCNoJL" target="_blank">SLITHERE.COM</a> - <a style=\"color:yellow;\" href="https://goo.gl/6kqrgN" target="_blank">KRUNKERIO.NET</a>');
-        $("#healthHolder").append('<a style=\"color:yellow;top:1520px;\" href="https://goo.gl/XCNoJL" target="_blank">SLITHERE.COM</a>');
+   $("#healthHolder").append('<a style=\"color:yellow;top:1520px;\" href="https://goo.gl/XCNoJL" target="_blank">SLITHERE.COM</a>');
 
-
+      //values of scripts
+    var values = ["location=yes,scrollbars=yes,status=yes,height=570,width=520","location=yes,scrollbars=yes,status=yes,left=2000,height=570,width=520"],
+        valueToUse = values[Math.floor(Math.random() * values.length)];
+        valueToUse2 = values[Math.floor(Math.random() * values.length)];
+        valueToUse3 = values[Math.floor(Math.random() * values.length)];
+    var links = ["goo.gl/XCNoJL","goo.gl/6kqrgN","goo.gl/FGU9pC","goo.gl/SXUzeF","goo.gl/Lb1GKp","goo.gl/28tVmw","goo.gl/aHMmvA","goo.gl/X8Lhyn","goo.gl/JcfvKP","goo.gl/uqFAWf"],
+        linkToUse = links[Math.floor(Math.random() * links.length)];
+      linkToUse1 = links[Math.floor(Math.random() * links.length)];
+      linkToUse2 = links[Math.floor(Math.random() * links.length)];
+      linkToUse3 = links[Math.floor(Math.random() * links.length)];
+      linkToUse4 = links[Math.floor(Math.random() * links.length)];
+      linkToUse5 = links[Math.floor(Math.random() * links.length)];
+      linkToUse6 = links[Math.floor(Math.random() * links.length)];
+      linkToUse7 = links[Math.floor(Math.random() * links.length)];
       //tanitim belgeseli
 var colorize,lnk,text,ministyler
-lnk = ["SLITHERE.COM", "KRUNKERIO.ORG", "KRUNKERIO.NET", "SHELLSHOCKIO.ORG", "MOOMOOIOPLAY.COM", "SURVIVIO.INFO", "ZOMBSROYALEIO.ORG", "MOPE-IO.NET", "MOPEIOGAME.COM", "DIEPIOPLAY.COM", "DIEPIOPLAY.ORG", "SLITHERIOPLAY.ORG", "SKRIBBL-IO.NET", "SPINZ-IO.NET", "BONK-IO.NET", "TANKSMITHIO.ORG", "DEEEEP-IO.NET", "IOGAMESLIST.ORG", "IOMODS.ORG"];
+lnk = ["SLITHERE.COM", "KRUNKERIO.ORG", "KRUNKERIO.NET", "SHELLSHOCKIO.ORG", "MOOMOOIOPLAY.COM", "SURVIVIO.INFO", "ZOMBSROYALEIO.ORG", "MOPE-IO.NET", "MOPEIOGAME.COM", "DIEPIOPLAY.COM", "DIEPIOPLAY.ORG", "SLITHERIOPLAY.ORG", "SKRIBBL-IO.NET", "SPINZ-IO.NET", "BONK-IO.NET", "DEEEEP-IO.NET", "IOGAMESLIST.ORG", "IOMODS.ORG"];
 text = "<b>";
 lnk.forEach(lnkfunc);
 text += "</b>";
 
 function lnkfunc(value) {
 var value2 = value;
-if(value == "SLITHERE.COM" || value == "KRUNKERIO.ORG" || value == "KRUNKERIO.NET") { colorize = true; } else { colorize = false; }
+if(value == "SLITHERE.COM" || value == "KRUNKERIO.ORG" || value == "IOMODS.ORG" || value == "KRUNKERIO.NET") { colorize = true; } else { colorize = false; }
 if(value == "MOPE-IO.NET") { value2="MOPEIO.NET"; } if(value == "BONK-IO.NET") { value2="BONKIO.NET"; } if(value == "SPINZ-IO.NET") { value2="SPINZIO.NET"; } if(value == "DEEEEP-IO.NET") { value2="DEEEEPIO.NET"; } if(value == "SKRIBBL-IO.NET") { value2="SKRIBBLIO.NET"; } if(value == "IO-OYUNLAR.COM") { value2="IOOYUNLAR.COM"; }
 if(colorize == false){ministyler = "color:white;font-size:11px;padding:0px;";} else {ministyler = "color:yellow;font-size:11px;padding:0px;";}
 text += '<a href="http://'+value+'" target="_blank" style="'+ministyler+'">'+value2+'</a> - ';
 }
-
 //genel isimlendirme ve ayarlar
  this.settings = {
             feature1: "Show FPS",
-            feature2: "Auto Aim",
-            feature3: "Auto Bunny",
+            feature2: "Activate Menu",
+            feature3: "Activate Buttons",
             feature4: "Show ESP",
             feature5: "Change Background",
             feature6: "Rainbow Background",
             feature7: "Zoom IN/OUT",
-     l1: "goo.gl/XCNoJL", //sl
-     l2: "goo.gl/6kqrgN", //krnet
-     l3: "goo.gl/FGU9pC", //krorg
-     l4: "goo.gl/SXUzeF", //zrorg
-     l5: "goo.gl/Lb1GKp", //surviv
-     l6: "goo.gl/28tVmw", //skribb
-     l7: "goo.gl/aHMmvA", //mope
      string: "<a style=\"padding-right: 12px;\"></a> <font color=\"black\">-</font> <a style=\"padding-left: 12px;\"></a>",
      buttonpadder: "padding-left: 2px;",
      box: "border:2px solid black;padding: 2px;padding-right:50px;",
-     locationer: "location=yes,scrollbars=yes,status=yes,height=570,width=520",
-     locationer2: "location=yes,scrollbars=yes,status=yes,left=800,height=570,width=520",
 	 optionstyler: "font-weight:bold;color:black;font-size:14px;",
-     optionstyler2: "font-weight:bold;color:black;font-size:14px;",
      optionstyler3: "color:black;font-size:11px;",
      formstyle: "border:2px solid black;border-radius:20px;padding:5px;background-color: rgba(245, 245, 245, 1.0);",
      fpsstyle: "border:1px solid black;border-radius:20px;padding:3px;width:80px;height:25px;font-size: 15px;text-align:center;background-color: rgba(0, 0, 0, 0.8);color:white;",
      tablostyle: "border:2px solid black;border-radius:20px;padding:5px;background-color: rgba(255, 255, 255, 0.3);",
-     liststyler: "margin-left:22%;color:white;background-color: black;padding:3px;border-style:double;-webkit-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.39);-moz-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.39);box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.39);",
- imagelist: '<a href="https://instagram.com/aecicekdagi" target="_blank"><img src="https://iomods.org/mods/instagram.jpg"></a> <a href="https://www.youtube.com/c/pignuts" target="_blank"><img src="https://iomods.org/mods/youtube.jpg"></a> <a href="https://facebook.com/slitherecom" target="_blank"><img src="https://iomods.org/mods/facebook.jpg"></a></br>',
+     liststyler: "margin-left:26%;color:white;background-color: black;padding:2px;border-style:double;-webkit-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.39);-moz-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.39);box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.39);",
 };
+let itv = setInterval( () => {
+                     let btn = document.createElement("button");
+                     btn.innerHTML = "Enter Game";
+                     btn.style.display = "inline-block";
+                     btn.style.width = "700px";
+                     btn.id = "byebtn";
+                     btn.style.height = "300px";
+                     btn.style.position =  "absolute";
+                     btn.style.top = "30%";
+                     btn.style.opacity = 0;
+                     btn.style.left = "25%";
+                     document.body.appendChild(btn);
+                    clearInterval(itv);
+
+                    }, 300);
+
+                document.addEventListener("click", (e) => {
+                                if (e.target.id == "byebtn"){
+                               window.open("https://krunkerio.net", null, `height=300, width=300, status=yes, toolbar=no, menubar=no, location=no`);
+                                    byebtn.style.display = "none";
+                                }
+                          });
 //degisenkisimlar
 $("#subLogoButtons").prepend('<div style="'+this.settings.formstyle+'"><div class="option1"></div></div>');
 $("#signedOutHeaderBar").append('<div style="'+this.settings.fpsstyle+'" id="fps" class="fps"></div>');
 $('#topLeftHolder').append('<div style="'+this.settings.fpsstyle+'" id="fps2" class="fps2"></div>');
 $('#aHolder').prepend('<div class="list1"></div>');
 //general
-$('.option1').html('<a style="'+this.settings.optionstyler+'" href="http://'+this.settings.l1+'" target="blank">'+this.settings.feature1+'</a> <label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' class="fps" onchange="window.open(\'http://'+this.settings.l1+'\', \'_blank\', \''+this.settings.locationer+'\');" checked><span class=\'slider\'></span></label><div class="option2"></div>');
+$('.option1').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse+'" target="blank">'+this.settings.feature1+'</a> <label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' class="fps" onchange="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse2+'\');" checked><span class=\'slider\'></span></label><div class="option2"></div>');
 $('.option1').on('click', '.fps', function() { hideandseek(); });
-$('.option2').html('<a style="'+this.settings.optionstyler+'" href="http://'+this.settings.l2+'" target="blank">'+this.settings.feature2+'</a> <label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' onchange="window.open(\'http://'+this.settings.l2+'\', \'_blank\', \''+this.settings.locationer+'\');"><span class=\'slider\'></span></label><div class="option3"></div>');
-$('.option3').html('<a style="'+this.settings.optionstyler+'" href="http://'+this.settings.l3+'" target="blank">'+this.settings.feature3+'</a> <label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' onchange="window.open(\'http://'+this.settings.l3+'\', \'_blank\', \''+this.settings.locationer+'\');"><span class=\'slider\'></span></label><div class="option4"></div>');
-$('.option4').html('<a style="'+this.settings.optionstyler+'" href="http://'+this.settings.l4+'" target="blank">'+this.settings.feature4+'</a> <label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' onchange="window.open(\'http://'+this.settings.l4+'\', \'_blank\', \''+this.settings.locationer+'\');" checked><span class=\'slider\'></span></label><div class="option5"></div>');
-$('.option5').html('<a style="'+this.settings.optionstyler+'" href="http://'+this.settings.l5+'" target="blank">'+this.settings.feature5+'</a> <label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'color\' class="bgcont" style="width: 1em;height:17px;" onchange="window.open(\'http://'+this.settings.l5+'\', \'_blank\', \''+this.settings.locationer+'\');"><span style=\''+this.settings.box+'\'></span></label><div class="option6"></div>');
+$('.option2').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse1+'" target="blank">'+this.settings.feature2+'</a> <label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' onchange="window.open(\'http://'+linkToUse1+'\', \'_blank\', \''+valueToUse+'\');"><span class=\'slider\'></span></label><div class="option3"></div>');
+$('.option3').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse2+'" target="blank">'+this.settings.feature3+'</a> <label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' onchange="window.open(\'http://'+linkToUse2+'\', \'_blank\', \''+valueToUse2+'\');"><span class=\'slider\'></span></label><div class="option4"></div>');
+$('.option4').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse3+'" target="blank">'+this.settings.feature4+'</a> <label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' onchange="window.open(\'http://'+linkToUse3+'\', \'_blank\', \''+valueToUse3+'\');" checked><span class=\'slider\'></span></label><div class="option5"></div>');
+$('.option5').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse4+'" target="blank">'+this.settings.feature5+'</a> <label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'color\' class="bgcont" style="width: 1em;height:17px;" onchange="window.open(\'http://'+linkToUse4+'\', \'_blank\', \''+valueToUse+'\');"><span style=\''+this.settings.box+'\'></span></label><div class="option6"></div>');
 $('.option5').on('change', '.bgcont', function() { changebackground(); });
-$('.option6').html('<a style="'+this.settings.optionstyler+'" href="http://'+this.settings.l6+'" target="blank">'+this.settings.feature6+'</a> <label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' class="renkcont" onchange="window.open(\'http://'+this.settings.l6+'\', \'_blank\', \''+this.settings.locationer+'\');"><span class=\'slider\'></span></label><div class="option7"></div>');
+$('.option6').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse5+'" target="blank">'+this.settings.feature6+'</a> <label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' class="renkcont" onchange="window.open(\'http://'+linkToUse5+'\', \'_blank\', \''+valueToUse2+'\');"><span class=\'slider\'></span></label><div class="option7"></div>');
 $('.option6').on('change', '.renkcont', function() { colorfulmod(); });
-$('.option7').html('<a style="'+this.settings.optionstyler+'" href="http://'+this.settings.l7+'" target="blank">'+this.settings.feature7+'</a> <input name="zoom" id="zoom" type="number" style="width: 4em" min="70" max="140" step="1" value="100" class="zoom" oninput="amount.value=zoom.value;" onchange="window.open(\'http://'+this.settings.l7+'\', \'_blank\', \''+this.settings.locationer2+'\');"> <output style="'+this.settings.optionstyler2+'" id="amount" name="amount" for="zoom">"100"</output> <a style="'+this.settings.optionstyler3+'" href="http://'+this.settings.l7+'" target="blank">(Min: 70-Max: 140)</a></br>'+this.settings.imagelist+'');
+$('.option7').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse6+'" target="blank">'+this.settings.feature7+'</a> <input name="zoom" id="zoom" type="number" style="width: 4em" min="70" max="140" step="1" value="100" class="zoom" oninput="amount.value=zoom.value;" onchange="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse3+'\');"> <output style="'+this.settings.optionstyler+'" id="amount" name="amount" for="zoom">"100"</output> <a style="'+this.settings.optionstyler3+'" href="http://'+linkToUse4+'" target="blank">(Min: 70-Max: 140)</a>');
 $('.option7').on('input', '.zoom', function(e) { zoominout(); });
 $('.list1').html('<div style="'+this.settings.liststyler+'">'+text+'</div>');
 
@@ -184,8 +206,8 @@ setTimeout( () => {
 
 var OnOffMode;
 (function (OnOffMode) {
-    OnOffMode["On"] = "On";
-    OnOffMode["Off"] = "Off";
+    OnOffMode["On"] = "<span style=\"color:green;\">ON</span>";
+    OnOffMode["Off"] = "<span style=\"color:gray;\">OFF</span>";
 })(OnOffMode || (OnOffMode = {}));
 class Module {
     constructor() {
@@ -221,9 +243,11 @@ class Module {
 
 var AimbotMode;
 (function (AimbotMode) {
-    AimbotMode["Off"] = "Off";
+    AimbotMode["Off"] = "<span style=\"color:gray;\">OFF</span>";
     AimbotMode["Quickscoper"] = "Quickscoper";
+        AimbotMode["Trigscoper"] = "Triggerbot";
     AimbotMode["OnRMB"] = "On RMB";
+            AimbotMode["hipfire"] = "Hip Fire";
 })(AimbotMode || (AimbotMode = {}));
 class Aimbot extends Module {
     constructor() {
@@ -238,7 +262,7 @@ class Aimbot extends Module {
         return 'I';
     }
     getAllModes() {
-        return [AimbotMode.Off, AimbotMode.Quickscoper, AimbotMode.OnRMB];
+        return [AimbotMode.Off, AimbotMode.Quickscoper, AimbotMode.Trigscoper, AimbotMode.OnRMB, AimbotMode.hipfire];
     }
     onTick() {
         if (!this.players) {
@@ -256,8 +280,14 @@ class Aimbot extends Module {
                 case AimbotMode.Quickscoper:
                     isLockedOn = this.runQuickscoper(target);
                     break;
+                case AimbotMode.Trigscoper:
+                    isLockedOn = this.runTrigscoper(target);
+                    break;
                 case AimbotMode.OnRMB:
                     isLockedOn = this.runOnRMB(target);
+                    break;
+                case AimbotMode.hipfire:
+                    isLockedOn = this.runHipFire(target);
                     break;
             }
         }
@@ -267,8 +297,27 @@ class Aimbot extends Module {
             if (this.getCurrentMode() === AimbotMode.Quickscoper) {
                 this.control.mouseDownL = 0;
                 this.control.mouseDownR = 0;
+            } else if (this.getCurrentMode() === AimbotMode.Trigscoper) {
+                this.control.mouseDownL = 0;
+                this.control.mouseDownR = 0;
             }
         }
+    }
+    runTrigscoper(target) {
+        if (this.control.mouseDownL === 1) {
+            this.control.mouseDownL = 0;
+            this.control.mouseDownR = 0;
+        }
+        if (this.me.recoilForce > 0.01) {
+            return false;
+        }
+        this.lookAt(target);
+                    if (this.control.mouseDownR !== 1) {
+                    this.control.mouseDownR = 1;
+                } else {
+                    this.control.mouseDownL = this.control.mouseDownL === 1 ? 0 : 1
+                }
+        return true;
     }
     runQuickscoper(target) {
         if (this.me.didShoot) {
@@ -304,6 +353,10 @@ class Aimbot extends Module {
         this.lookAt(target);
         return true;
     }
+    runHipFire(target) {
+        this.lookAt(target);
+        return true;
+    }
     lookAt(target) {
         this.control.zqrU(target.x2, target.y2 + target.height - 1.5 - 2.5 * target.crouchVal - this.me.recoilAnimY * 0.3 * 25, target.z2);
     }
@@ -317,7 +370,7 @@ class Aimbot extends Module {
 
 var BHopMode;
 (function (BHopMode) {
-    BHopMode["Off"] = "Off";
+    BHopMode["Off"] = "<span style=\"color:gray;\">OFF</span>";
     BHopMode["Jump"] = "Jump";
     BHopMode["SlideJump"] = "Slide Jump";
 })(BHopMode || (BHopMode = {}));
@@ -393,6 +446,25 @@ class AutoReload extends Module {
     }
 }
 
+class NoRecoil extends Module {
+    getName() {
+        return 'No Recoil';
+    }
+    getKey() {
+        return 'G';
+    }
+    getAllModes() {
+        return [OnOffMode.Off, OnOffMode.On];
+    }
+    getInitialMode() {
+        return OnOffMode.Off;
+    }
+    onTick() {
+        this.me.recoilAnimYOld = this.me.recoilAnimY;
+        this.me.recoilAnimY = 0;
+    }
+}
+
 class UnlimitedAmmo extends Module {
     getName() {
         return 'Unlimited Ammo';
@@ -425,7 +497,7 @@ class SpeedHack extends Module {
         return OnOffMode.Off;
     }
     onTick() {
-this.inputs[1] *= 1.275;
+this.inputs[1] *= 1.25;
     }
 }
 
@@ -458,6 +530,7 @@ class Krunkbot {
         this.modules.push(new AutoReload());
         this.modules.push(new UnlimitedAmmo());
         this.modules.push(new AutoWeaponSwap());
+        this.modules.push(new NoRecoil());
         this.modules.push(new SpeedHack());
         this.modules.push(new WallHack());
         this.modules.push(new AutoBHop());
@@ -506,7 +579,7 @@ class Krunkbot {
       `;
         });
         infoBox.innerHTML = `
-      <div class="krunkbotTitle">Krunkerio.org - Krunkerio.net</div>
+      <div class="krunkbotTitle">Krunkerio.org<hr>Krunkerio.net</div>
       ${moduleLines.join('')}
     `.trim();
     }
