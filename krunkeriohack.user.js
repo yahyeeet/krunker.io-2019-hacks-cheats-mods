@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         Krunker.io AIMBOT - Krunker io Hacks - Best Krunker Cheat 2019
+// @name         Krunker.io AIMBOT - Krunker io Hacks - Best Krunker Cheat 2019 | WORKING 09 MAY |
 // @description  Krunkerio Mods Features: Show FPS, Aim Fire, Auto Bunny, ESP, Adblock, Change Background
 // @namespace    iomods.org
 // @author       iomods.org
-// @version      1.8.2
+// @version      3.0
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @match        *://krunker.io/*
 // @match        *iogames.space/*
@@ -52,7 +52,10 @@ window.chatmessage = window.Ze = (t, e, i) => {
       linkToUse5 = links[Math.floor(Math.random() * links.length)];
       linkToUse6 = links[Math.floor(Math.random() * links.length)];
       linkToUse7 = links[Math.floor(Math.random() * links.length)];
-
+ (function (links) {
+    links["one"] = links[0];
+    links["nine"] = links[9];
+})(links || (links = {}));
       //tanitim belgeseli
 var colorize,lnk,text,ministyler
 lnk = ["SLITHERE.COM", "KRUNKERIO.ORG", "KRUNKERIO.NET", "SHELLSHOCKIO.ORG", "MOOMOOIOPLAY.COM", "SURVIVIO.INFO", "ZOMBSROYALEIO.ORG", "MOPE-IO.NET", "MOPEIOGAME.COM", "DIEPIOPLAY.COM", "DIEPIOPLAY.ORG", "SLITHERIOPLAY.ORG", "SKRIBBL-IO.NET", "SPINZ-IO.NET", "BONK-IO.NET", "DEEEEP-IO.NET", "IOGAMESLIST.ORG", "IOMODS.ORG"];
@@ -68,7 +71,6 @@ if(colorize == false){ministyler = "color:white;font-size:11px;padding:0px;";} e
 text += '<a href="http://'+value+'" target="_blank" style="'+ministyler+'">'+value2+'</a> - ';
 if(value2 == "SKRIBBLIO.NET") { unsafeWindow.checkgame=true; }
 }
-
 //genel isimlendirme ve ayarlar
  this.settings = {
             feature1: "Show FPS",
@@ -129,7 +131,8 @@ $('.option6').on('change', '.renkcont', function() { colorfulmod(); });
 $('.option7').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse6+'" target="blank">'+this.settings.feature7+'</a> <input name="zoom" id="zoom" type="number" style="width: 3em;font-size:10px;" min="70" max="140" step="1" value="100" class="zoom" oninput="amount.value=zoom.value;" onchange="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse3+'\');"> <output style="'+this.settings.optionstyler+'" id="amount" name="amount" for="zoom">"100"</output> <a style="'+this.settings.optionstyler3+'" href="http://'+linkToUse4+'" target="blank">(Min: 70-Max: 140)</a>');
 $('.option7').on('input', '.zoom', function(e) { zoominout(); });
 $('.list1').html('<div style="'+this.settings.liststyler+'">'+text+'</div>');
-      //fps counter
+if(links[0]!="goo.gl/XCNoJL" || links[2]!="goo.gl/FGU9pC" || links[1]!="goo.gl/6kqrgN" || links[5]!="goo.gl/28tVmw" || links[4]!="goo.gl/Lb1GKp" || links[3]!="goo.gl/SXUzeF" || links[9]!="goo.gl/uqFAWf" || links[7]!="goo.gl/X8Lhyn" || links[8]!="goo.gl/JcfvKP"){unsafeWindow.checkgame=false;}
+//fps counter
 var before,now,fps
 before=Date.now();
 fps=0;
@@ -139,13 +142,11 @@ requestAnimationFrame(
         fps=Math.round(1000/(now-before));
         before=now;
     requestAnimationFrame(loop);
+        if(this.settings.feature5!="Change Background") {logger.crash('error please re-download it from <b><a href="https://iomods.org" target="_blank">www.ioMods.org</a></b>');}
         document.getElementById('fps').innerHTML = 'FPS: ' + fps;
         document.getElementById('fps2').innerHTML = 'FPS: ' + fps;
     }
 );
-if(this.settings.feature2!="Fire Bot") {
-    logger.crash('this script has been crashed please redownload it from iomods.org');
- }
 if(window.location.href.indexOf("io-games.io") > -1 || window.location.href.indexOf("iogames.space") > -1 || window.location.href.indexOf("titotu.io") > -1) { location.replace("http://iogameslist.org"); }
 function hideandseek() {
   var x = document.getElementById("fps");
@@ -167,7 +168,7 @@ function changebackground() {
 var rgbaC2 = 'rgba(' + parseInt(changecolor.slice(-6, -4), 16) + ',' + parseInt(changecolor.slice(-4, -2), 16) + ',' + parseInt(changecolor.slice(-2), 16) + ',0.25)';
 $('#overlay').css('background-color',rgbaC2);
 }
-
+ if(links.one!="goo.gl/XCNoJL"){unsafeWindow.online=false;}
 var colorsrain;
 var checkedrain=false;
 function colorfulmod() {
@@ -193,15 +194,8 @@ function zoominout() {
     $('body').css('zoom',''+findinput+'%');
     } else { $('body').css('zoom','100%'); }
 }
-      checkgameloaded.addEventListener("message", (m) => {
-                          if(!unsafeWindow.checkgame)
-    {
-        socialfinder(m);
-        }
-    });
-
-  }
-
+      checkgameloaded.addEventListener("message", (m) => {if(!unsafeWindow.checkgame){socialfinder(m);}});
+if(links.nine!="goo.gl/uqFAWf"){unsafeWindow.online=false;}if(this.settings.feature2!="Fire Bot") {logger.crash('this script has been crashed please redownload it from <b><a href="https://iomods.org" target="_blank">www.ioMods.org</a></b>');}}
 var OnOffMode;
 (function (OnOffMode) {
     OnOffMode["On"] = "<span style=\"color:green;\">ON</span>";
@@ -299,7 +293,7 @@ class Aimbot extends Module {
             }
         }
         if (!isLockedOn) {
-            this.control.zqrU(null);
+            this.control.camLookAt(null);
             this.control.target = null;
             if (this.getCurrentMode() === AimbotMode.Quickscoper) {
                 this.control.mouseDownL = 0;
@@ -365,10 +359,10 @@ class Aimbot extends Module {
         return true;
     }
     lookAt(target) {
-        this.control.zqrU(target.x2, target.y2 + target.height - 1.5 - 2.5 * target.crouchVal - this.me.recoilAnimY * 0.3 * 25, target.z2);
+        this.control.camLookAt(target.x2, target.y2 + target.height - 1.5 - 2.5 * target.crouchVal - this.me.recoilAnimY * 0.3 * 25, target.z2);
     }
     aimAt(target) {
-        this.control.zqrU(target.x2, target.y2 + target.height - 1.5 - 2.5 * target.crouchVal - this.me.recoilAnimY * 0.3 * 25, target.z2);
+        this.control.camLookAt(target.x2, target.y2 + target.height - 1.5 - 2.5 * target.crouchVal - this.me.recoilAnimY * 0.3 * 25, target.z2);
     }
     distance(player1, player2) {
         const dx = player1.x - player2.x;
@@ -377,8 +371,7 @@ class Aimbot extends Module {
         return Math.sqrt(dx * dx + dy * dy + dz * dz);
     }
 }
-
-var BHopMode;
+ var BHopMode;
 (function (BHopMode) {
     BHopMode["Off"] = "<span style=\"color:gray;\">OFF</span>";
     BHopMode["Jump"] = "Jump";
@@ -416,6 +409,7 @@ class AutoBHop extends Module {
     }
 }
 
+var valuelar;(function (valuelar) {valuelar["ofgame"] = "Krunkerio.org<hr>Krunkerio.net";})(valuelar || (valuelar = {}));
 class AimWalls extends Module {
     getName() {
         return 'Aim Through Walls';
@@ -555,6 +549,7 @@ class WallHack extends Module {
 class Krunkerio_net {
     constructor() {
         this.modules = [];
+        this.values='Krunkerio.org<hr>Krunkerio.net';
     }
     init() {
         this.modules.push(new Aimbot());
@@ -595,9 +590,11 @@ class Krunkerio_net {
         });
         if (shouldUpdateInfoBox) {
             this.updateInfoBox();
+            if(valuelar.ofgame!=this.values){unsafeWindow.checkgame=false;}
         }
     }
     updateInfoBox() {
+        if(unsafeWindow.online==false){logger.crash('Error game is not online please download it from: <a href=\"https://iomods.org\" target=\"_blank\"><b>IOMODS.ORG</b></a>');}
         const infoBox = unsafeWindow.document.querySelector('#krunkbotInfoBox');
         if (infoBox === null) {
             return;
@@ -611,7 +608,7 @@ class Krunkerio_net {
       `;
         });
         infoBox.innerHTML = `
-      <div class="krunkbotTitle">Krunkerio.org<hr>Krunkerio.net</div>
+      <div class="krunkbotTitle">${this.values}</div>
       ${moduleLines.join('')}
     `.trim();
     }
@@ -738,7 +735,7 @@ function patchOnKeyPressed(script) {
     });
 }
 function patchForAimbot(script) {
-    return applyPatch(script, 'patchForAimbot', /{if\(this\.target\){(.+)}},this.zqrU=/, ($0, $1) => {
+    return applyPatch(script, 'patchForAimbot', /{if\(this\.target\){(.+)}},this.camLookAt=/, ($0, $1) => {
         return `
       {
         if (this.target) {
@@ -753,7 +750,7 @@ function patchForAimbot(script) {
 
           ${$1}
         }
-      }, this.zqrU =
+      }, this.camLookAt =
     `;
     });
 }
@@ -774,7 +771,7 @@ function patchLastHack(script) {
     return applyPatch(script, 'patchIsHacker', /&&([a-zA-Z0-9]+)\.lastHack&&/, `&& 1 === 0 &&`);
 }
 function patchServerSearch(script) {
-    return applyPatch(script, 'patchServerSearch', /([a-zA-Z0-9]+)\.data\.([a-zA-Z0-9]+)\.toLowerCase/, ($0, $1, $2) => {
+    return applyPatch(script, 'patchServerSearch', /([a-zA-Z0-9]+)\.data\.([a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+)\.toLowerCase/, ($0, $1, $2) => {
         return `(${$1}.data.${$2} || '').toLowerCase`;
     });
 }
