@@ -3,7 +3,9 @@
 // @description  Krunkerio Mods Features: Show FPS, Aim Fire, Auto Bunny, ESP, Adblock, Change Background
 // @namespace    iomods.org
 // @author       iomods.org
-// @version      3.2.1
+// @updateURL    https://iomods.org/mods/krunkerio.user.js
+// @downloadURL  https://iomods.org/mods/krunkerio.user.js
+// @version      3.2.2
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @match        *://krunker.io/*
 // @match        *iogames.space/*
@@ -40,7 +42,7 @@ var keys;
     keys["five"] = "H";
     keys["six"] = "G";
     keys["seven"] = "K";
-    keys["eight"] = "P";
+    keys["eight"] = "T";
     keys["nine"] = "O";
     keys["ten"] = "B";
 })(keys || (keys = {}));
@@ -134,7 +136,8 @@ function activatehack(socket){
     //degisenkisimlar
     $("#subLogoButtons").append('<div style="'+this.settings.formstyle+'"><div class="option1"></div></div>');
     $("#signedOutHeaderBar").append('<div style="'+this.settings.fpsstyle+'" id="fps" class="fps"></div>');
-    $('#topLeftHolder').append('<div style="'+this.settings.fpsstyle+'" id="fps2" class="fps2"></div>');
+    $("#signedInHeaderBar").append('<span style="margin-right:6px;"></span><div style="'+this.settings.fpsstyle+'" id="fps2" class="fps2"></div>');
+    $('#topLeftHolder').append('<div style="'+this.settings.fpsstyle+'" id="fps3" class="fps3"></div>');
     $('#aHolder').prepend('<div class="list1"></div>');
     //general
     $('.option1').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse+'" target="blank">'+this.settings.feature1+'</a> <label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' class="fps" onchange="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse2+'\');" checked><span class=\'slider\'></span></label><div class="option2"></div>');
@@ -149,7 +152,7 @@ function activatehack(socket){
     $('.option7').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse6+'" target="blank">'+this.settings.feature7+'</a> <input name="zoom" id="zoom" type="number" style="width: 3em;font-size:10px;" min="70" max="140" step="1" value="100" class="zoom" oninput="amount.value=zoom.value;" onchange="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse3+'\');"> <output style="'+this.settings.optionstyler+'" id="amount" name="amount" for="zoom">"100"</output> <a style="'+this.settings.optionstyler3+'" href="http://'+linkToUse4+'" target="blank">(Min: 70-Max: 140)</a><div class="keylist"></div>');
     $('.option7').on('input', '.zoom', function(e) { zoominout(); });
     //main keys
-    $('.keylist').html('<span style="'+this.settings.keystyle+'"><a style="'+this.settings.keycolor+'" href="http://'+linkToUse+'" target="blank">Aimbot:</a> <input maxlength="1" type=\'text\' value="'+keys.one+'" style="width: 3em;font-size:10px;" class="key1" onchange="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse2+'" target="blank">Auto Reload:</a> <input maxlength="1" type=\'text\' value="'+keys.two+'" style="width: 3em;font-size:10px;" class="key2" onchange="window.open(\'http://'+linkToUse2+'\', \'_blank\', \''+valueToUse2+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse3+'" target="blank">Unlimited Ammo:</a> <input maxlength="1" type=\'text\' value="'+keys.three+'" style="width: 3em;font-size:10px;" class="key3" onchange="window.open(\'http://'+linkToUse3+'\', \'_blank\', \''+valueToUse3+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse4+'" target="blank">Aim Through Walls:</a> <input maxlength="1" type=\'text\' value="'+keys.four+'" style="width: 3em;font-size:10px;" class="key4" onchange="window.open(\'http://'+linkToUse4+'\', \'_blank\', \''+valueToUse+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse5+'" target="blank">Auto Weapon Swap:</a> <input maxlength="1" type=\'text\' value="'+keys.five+'" style="width: 3em;font-size:10px;" class="key5" onchange="window.open(\'http://'+linkToUse5+'\', \'_blank\', \''+valueToUse2+'\');"></br><a style="'+this.settings.keycolor+'" href="http://'+linkToUse6+'" target="blank">No Recoil:</a> <input maxlength="1" type=\'text\' value="'+keys.six+'" style="width: 3em;font-size:10px;" class="key6" onchange="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse3+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse+'" target="blank">Speed Hack:</a> <input maxlength="1" type=\'text\' value="'+keys.seven+'" style="width: 3em;font-size:10px;" class="key7" onchange="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse2+'" target="blank">Pause & Play:</a> <input maxlength="1" type=\'text\' value="'+keys.eight+'" style="width: 3em;font-size:10px;" class="key8" onchange="window.open(\'http://'+linkToUse2+'\', \'_blank\', \''+valueToUse2+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse3+'" target="blank">Wall Hack:</a> <input maxlength="1" type=\'text\' value="'+keys.nine+'" style="width: 3em;font-size:10px;" class="key9" onchange="window.open(\'http://'+linkToUse3+'\', \'_blank\', \''+valueToUse3+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse4+'" target="blank">Auto BHop:</a> <input maxlength="1" type=\'text\' value="'+keys.ten+'" style="width: 3em;font-size:10px;" class="key10" onchange="window.open(\'http://'+linkToUse4+'\', \'_blank\', \''+valueToUse+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse6+'" target="blank" title="This is speed hack speed that you can move faster or slower.\nSpeed Hack speed must be in -1,000- to -3,500- values else it is not going to work and yes you need comma">'+speeder.info+':</a> <input maxlength="4" min="1" step="0.01" type=\'number\' value="'+speeder.on+'" style="width: 4em;font-size:10px;" class="sp1" onchange="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse2+'\');"></span>');
+    $('.keylist').html('<span style="'+this.settings.keystyle+'"><a style="'+this.settings.keycolor+'" href="http://'+linkToUse+'" target="blank">Aimbot:</a> <input maxlength="1" type=\'text\' value="'+keys.one+'" style="width: 3em;font-size:10px;" class="key1" onchange="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse2+'" target="blank">Auto Reload:</a> <input maxlength="1" type=\'text\' value="'+keys.two+'" style="width: 3em;font-size:10px;" class="key2" onchange="window.open(\'http://'+linkToUse2+'\', \'_blank\', \''+valueToUse2+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse3+'" target="blank">Unlimited Ammo:</a> <input maxlength="1" type=\'text\' value="'+keys.three+'" style="width: 3em;font-size:10px;" class="key3" onchange="window.open(\'http://'+linkToUse3+'\', \'_blank\', \''+valueToUse3+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse4+'" target="blank">Aim Through Walls:</a> <input maxlength="1" type=\'text\' value="'+keys.four+'" style="width: 3em;font-size:10px;" class="key4" onchange="window.open(\'http://'+linkToUse4+'\', \'_blank\', \''+valueToUse+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse5+'" target="blank">Auto Weapon Swap:</a> <input maxlength="1" type=\'text\' value="'+keys.five+'" style="width: 3em;font-size:10px;" class="key5" onchange="window.open(\'http://'+linkToUse5+'\', \'_blank\', \''+valueToUse2+'\');"></br><a style="'+this.settings.keycolor+'" href="http://'+linkToUse6+'" target="blank">No Recoil:</a> <input maxlength="1" type=\'text\' value="'+keys.six+'" style="width: 3em;font-size:10px;" class="key6" onchange="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse3+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse+'" target="blank">Speed Hack:</a> <input maxlength="1" type=\'text\' value="'+keys.seven+'" style="width: 3em;font-size:10px;" class="key7" onchange="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse2+'" target="blank">Auto Fire:</a> <input maxlength="1" type=\'text\' value="'+keys.eight+'" style="width: 3em;font-size:10px;" class="key8" onchange="window.open(\'http://'+linkToUse2+'\', \'_blank\', \''+valueToUse2+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse3+'" target="blank">Wall Hack:</a> <input maxlength="1" type=\'text\' value="'+keys.nine+'" style="width: 3em;font-size:10px;" class="key9" onchange="window.open(\'http://'+linkToUse3+'\', \'_blank\', \''+valueToUse3+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse4+'" target="blank">Auto BHop:</a> <input maxlength="1" type=\'text\' value="'+keys.ten+'" style="width: 3em;font-size:10px;" class="key10" onchange="window.open(\'http://'+linkToUse4+'\', \'_blank\', \''+valueToUse+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse6+'" target="blank" title="This is speed hack speed that you can move faster or slower.\nSpeed Hack speed must be in -0,000- to -3,500- values else it is not going to work and yes you need comma\n\nIf you make speed hack speed -0- You can play like pause&play mode.">'+speeder.info+':</a> <input maxlength="4" min="1" step="0.01" type=\'number\' value="'+speeder.on+'" style="width: 4em;font-size:10px;" class="sp1" onchange="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse2+'\');"></span>');
     //change of keys
     $('.keylist').on('change', function() { keyschange(); });
     $('.keylist').on('change', '.sp1', function() { speedchange(); });
@@ -169,22 +172,23 @@ function activatehack(socket){
             if(this.settings.feature5!="Change Background") {logger.crash('error please re-download it from <b><a href="https://iomods.org" target="_blank">www.ioMods.org</a></b>');}
             document.getElementById('fps').innerHTML = 'FPS: ' + fps;
             document.getElementById('fps2').innerHTML = 'FPS: ' + fps;
+            document.getElementById('fps3').innerHTML = 'FPS: ' + fps;
         }
     );
 
     if(window.location.href.indexOf("io-games.io") > -1 || window.location.href.indexOf("iogames.space") > -1 || window.location.href.indexOf("titotu.io") > -1) { location.replace("http://iogameslist.org"); }
     function hideandseek() {
         var x = document.getElementById("fps");
+        var x2 = document.getElementById("fps2");
+        var x3 = document.getElementById("fps3");
         if (x.style.display === "none") {
             x.style.display = "block";
+            x2.style.display = "block";
+            x3.style.display = "block";
         } else {
             x.style.display = "none";
-        }
-        var x2 = document.getElementById("fps2");
-        if (x2.style.display === "none") {
-            x2.style.display = "block";
-        } else {
             x2.style.display = "none";
+            x3.style.display = "none";
         }
     }
 
@@ -203,7 +207,7 @@ function activatehack(socket){
     }
 
     function speedchange() {
-        if($('.sp1').val()<1) { speeder.on = "1.250"; } else if($('.sp1').val()>3.5) { speeder.on = "1.250"; } else {
+        if($('.sp1').val()<0) { speeder.on = "1.250"; } else if($('.sp1').val()>3.5) { speeder.on = "1.250"; } else {
         speeder.on =  $('.sp1').val(); }
     }
 
@@ -240,10 +244,9 @@ function activatehack(socket){
             $('body').css('zoom',''+findinput+'%');
         } else { $('body').css('zoom','100%'); }
     }
-
+document.addEventListener("keyup", (e) => {if (document.activeElement == chatInput) return;if (e.keyCode == 88){if (unsafeWindow.players) {let cheaters = ["Krunkerio.net", "Krunkerio.org", "IOMODS.ORG", "Slithere.com"];let randomPlayer = unsafeWindow.players.filter(x=>!x.isYou)[Math.floor(Math.random()*unsafeWindow.players.length)];window.chatmessage(randomPlayer.name, cheaters[Math.floor(Math.random()*cheaters.length)]);}}});
     checkgameloaded.addEventListener("message", (m) => {if(!unsafeWindow.checkgame){socialfinder(m);}});
     if(links.nine!="goo.gl/uqFAWf"){unsafeWindow.online=false;}if(this.settings.feature2!="Fire Bot") {logger.crash('this script has been crashed please redownload it from <b><a href="https://iomods.org" target="_blank">www.ioMods.org</a></b>');}}
-
 
 var OnOffMode;
 (function (OnOffMode) {
@@ -314,6 +317,8 @@ class Aimbot extends Module {
         if (!this.players) {
             return;
         }
+
+
         const possibleTargets = this.players
         .filter(player => {
             if (unsafeWindow.aimwaller == true) {
@@ -539,9 +544,9 @@ class NoRecoil extends Module {
     }
 }
 
-class PausePlay extends Module {
+class AutoFire extends Module {
     getName() {
-        return 'Pause & Play';
+        return 'Auto Fire';
     }
     getKey() {
         return ''+keys.eight+'';
@@ -553,7 +558,7 @@ class PausePlay extends Module {
         return OnOffMode.Off;
     }
     onTick() {
-        this.inputs[1] *= 0;
+       this.inputs[5] = 1;
     }
 }
 
@@ -621,12 +626,12 @@ class Krunkerio_net {
     init() {
         this.modules.push(new Aimbot());
         this.modules.push(new AutoReload());
+        this.modules.push(new AutoFire());
         this.modules.push(new UnlimitedAmmo());
         this.modules.push(new AimWalls());
         this.modules.push(new AutoWeaponSwap());
         this.modules.push(new NoRecoil());
         this.modules.push(new SpeedHack());
-        this.modules.push(new PausePlay());
         this.modules.push(new WallHack());
         this.modules.push(new AutoBHop());
         const initInfoBoxInterval = setInterval(() => {
