@@ -10,14 +10,16 @@ It helps you to play with extra features and when you visit the game, buttons wi
 <b>Private Settings For Krunker.io Mod:</b>
 Rainbow Game, Colorful Game Play, FPS, Adblock</br>
 I Key: Aimbot (Quickscopper,Triggerbot,On RMB,Hip Fire)</br>
-B Key: Bhop (Jump, Slide Jump)</br>
-U Key: Aim Through Walls</br>
 J Key: Auto Reload</br>
+T Key: Auto Fire
+U Key: Aim Through Walls</br>
 L Key: Unlimited Ammo</br>
 H Key: Auto Weapon Swap</br>
 G Key: No Recoil</br>
 K Key: Speed Hack</br>
 O Key: Wall Hack</br>
+B Key: Bhop (Jump, Slide Jump)</br>
+X Key: Chatflood</br>
 
 <h3>How to Install</h3>
 <h4>Step 1:</h4>
