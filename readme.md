@@ -1,25 +1,9 @@
 <h2>About Krunker.io Mod</h2>
 It helps you to play with extra features and when you visit the game, buttons will appear to press options. In addition, krunker.io script, krunker.io mods, krunker.io hacks, krunker.io cheats whatever you call, increases your game play and make you better player. 
 </br></br>
-<b>General Settings For All .io Mods:</b>
-<ul><li>Zoom IN/OUT</li>
-<li>Change Background</li>
-<li>Rainbow Background</li>
+<b>Private Settings For Krunker.io Mod:</b>
 <li>Show FPS ON/OFF</li>
 <li>Adblock Plus+</li></ul>
-<b>Private Settings For Krunker.io Mod:</b>
-Rainbow Game, Colorful Game Play, FPS, Adblock</br>
-I Key: Aimbot (Quickscopper,Triggerbot,On RMB,Hip Fire)</br>
-J Key: Auto Reload</br>
-T Key: Auto Fire
-U Key: Aim Through Walls</br>
-L Key: Unlimited Ammo</br>
-H Key: Auto Weapon Swap</br>
-G Key: No Recoil</br>
-K Key: Speed Hack</br>
-O Key: Wall Hack</br>
-B Key: Bhop (Jump, Slide Jump)</br>
-X Key: Chatflood</br>
 
 <h3>How to Install</h3>
 <h4>Step 1:</h4>
