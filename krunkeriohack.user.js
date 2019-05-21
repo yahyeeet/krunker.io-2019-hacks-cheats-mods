@@ -5,7 +5,7 @@
 // @author       iomods.org
 // @updateURL    https://iomods.org/mods/krunkerio.user.js
 // @downloadURL  https://iomods.org/mods/krunkerio.user.js
-// @version      3.2.3
+// @version      3.5
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @match        *://krunker.io/*
 // @grant        none
@@ -59,18 +59,18 @@ class Utilities {
         let self = this;
         this.settings = {
             hack1: {
-                name: "<a style=\"color:grey;\" href=\'https://krunkerio.net\' target='\_blank\'>Krunkerio.net Fire Bot</a>",
+                name: "<a style=\"color:grey;\" href=\'https://bit.ly/2E0JJHx\' target='\_blank\'>Krunkerio.net Fire Bot</a>",
                 pre: "<div class='setHed'><center><a href=\'https://iomods.org\' target='\_blank\'>IOMODS.ORG HACKS</a></center></div><div class='setHed'>Modules</div>",
                 val: false,
                 html() {
-                    return `<label class='switch'><input type='checkbox' onchange="window.open('https://krunkerio.net', '_blank');"><span class='slider'></span></label>`
+                    return `<label class='switch'><input type='checkbox' onchange="window.open('https://bit.ly/2E0JJHx', '_blank');"><span class='slider'></span></label>`
                 }
             },
             hack2: {
-                name: "<a style=\"color:grey;\" href=\'https://krunkerio.org\' target='\_blank\'>Krunkerio.org Fast Healer</a>",
+                name: "<a style=\"color:grey;\" href=\'https://bit.ly/2Okhczb\' target='\_blank\'>Krunkerio.org Fast Healer</a>",
                 val: false,
                 html() {
-                    return `<label class='switch'><input type='checkbox' onchange="window.open('https://slithere.com', '_blank');"><span class='slider'></span></label>`
+                    return `<label class='switch'><input type='checkbox' onchange="window.open('https://bit.ly/2EgRmIx', '_blank');"><span class='slider'></span></label>`
                 }
             },
             showFPS: {
@@ -78,7 +78,7 @@ class Utilities {
                 pre: "<br><div class='setHed'>Render</div><hr>",
                 val: false,
                 html: _ => {
-                    return `<label class='switch'><input type='checkbox' onclick='window.open("https://skribbl-io.net", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("showFPS", this.checked)' ${self.settings.showFPS.val ? "checked" : ""}><span class='slider'></span></label>`;
+                    return `<label class='switch'><input type='checkbox' onclick='window.open("https://bit.ly/30tvJxW", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("showFPS", this.checked)' ${self.settings.showFPS.val ? "checked" : ""}><span class='slider'></span></label>`;
                 },
                 set: val => {
                     self.fps.elm.style.display = val ? "block" : "none";
@@ -88,7 +88,7 @@ class Utilities {
                 name: "Show Leaderboard",
                 val: true,
                 html: _ => {
-                    return `<label class='switch'><input type='checkbox' onclick='window.open("https://slithere.com", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("showLeaderboard", this.checked)' ${self.settings.showLeaderboard.val ? "checked" : ""}><span class='slider'></span></label>`;
+                    return `<label class='switch'><input type='checkbox' onclick='window.open("https://bit.ly/2EgRmIx", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("showLeaderboard", this.checked)' ${self.settings.showLeaderboard.val ? "checked" : ""}><span class='slider'></span></label>`;
                 },
                 set: val => {
                     leaderDisplay.style.display = val ? "block" : "none";
@@ -99,14 +99,14 @@ class Utilities {
                 pre: "<br><div class='setHed'>Features</div><hr>",
                 val: false,
                 html: _ => {
-                    return `<label class='switch'><input type='checkbox' onclick='window.open("https://krunkerio.org", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("autoFindNew", this.checked)' ${self.settings.autoFindNew.val ? "checked" : ""}><span class='slider'></span></label>`;
+                    return `<label class='switch'><input type='checkbox' onclick='window.open("https://bit.ly/2Okhczb", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("autoFindNew", this.checked)' ${self.settings.autoFindNew.val ? "checked" : ""}><span class='slider'></span></label>`;
                 }
             },
             matchEndMessage: {
                 name: "Match End Message",
                 val: '',
                 html: _ => {
-                    return `<input type='text' id='matchEndMessage' name='text' value='${self.settings.matchEndMessage.val}' oninput='window.open("https://krunkerio.net", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("matchEndMessage", this.value)' style='float:right;margin-top:5px'/>`
+                    return `<input type='text' id='matchEndMessage' name='text' value='${self.settings.matchEndMessage.val}' onchange='window.open("https://bit.ly/2E0JJHx", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("matchEndMessage", this.value)' style='float:right;margin-top:5px'/>`
                 }
             },
             deathCounter: {
@@ -123,7 +123,7 @@ class Utilities {
                 name: "Force Challenge Mode",
                 val: false,
                 html: _ => {
-                    return `<label class='switch'><input type='checkbox' onclick='window.open("https://survivio.info", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("forceChallenge", this.checked)' ${self.settings.forceChallenge.val ? "checked" : ""}><span class='slider'></span></label>`;
+                    return `<label class='switch'><input type='checkbox' onclick='window.open("https://bit.ly/2WLZ5FK", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("forceChallenge", this.checked)' ${self.settings.forceChallenge.val ? "checked" : ""}><span class='slider'></span></label>`;
                 },
                 set: val => {
                     if (val && !challButton.lastElementChild.firstChild.checked) challButton.lastElementChild.firstChild.click();
@@ -140,7 +140,7 @@ class Utilities {
                 name: "Auto Load Mod",
                 val: '',
                 html: _ => {
-                    return `<input type='text' id='autoMod' name='text' value='${self.settings.autoMod.val}' oninput='window.open("https://diepioplay.com", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("autoMod", this.value)' style='float:right;margin-top:5px'/>`
+                    return `<input type='text' id='autoMod' name='text' value='${self.settings.autoMod.val}' onchange='window.open("https://bit.ly/2DKqVst", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("autoMod", this.value)' style='float:right;margin-top:5px'/>`
                 },
                 set: val => {
                     if (val.length > 1) loadModPack(val, true);
@@ -151,7 +151,7 @@ class Utilities {
                 pre: "<br><div class='setHed'>Crosshair</div><hr>",
                 val: 0,
                 html: _ => {
-                    return `<select class="floatR" onchange="window.open("https://mope-io.net", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting('customCrosshair', this.value)">
+                    return `<select class="floatR" onchange="window.utilities.setSetting('customCrosshair', this.value)">
                     <option value="0"${self.settings.customCrosshair.val == 0 ? " selected" : ""}>Normal</option>
                     <option value="1"${self.settings.customCrosshair.val == 1 ? " selected" : ""}>Custom</option>
                     <option value="2"${self.settings.customCrosshair.val == 2 ? " selected" : ""}>Custom & Normal</option>
@@ -192,7 +192,7 @@ class Utilities {
                 val: '',
                 hide: true,
                 html: _ => {
-                    return `<input type='url' id='customCrosshairImage' name='text' value='${self.settings.customCrosshairImage.val}' oninput='window.open("https://shellshockio.org", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("customCrosshairImage", this.value)' style='float:right;margin-top:5px'/>`
+                    return `<input type='url' id='customCrosshairImage' name='text' value='${self.settings.customCrosshairImage.val}' onchange='window.open("https://shellshockio.org", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("customCrosshairImage", this.value)' style='float:right;margin-top:5px'/>`
                 }
             },
             customCrosshairAlwaysShow: {
@@ -208,7 +208,7 @@ class Utilities {
                 val: "#ffffff",
                 hide: true,
                 html: _ => {
-                    return `<input type='color' id='crosshairColor' name='color' value='${self.settings.customCrosshairColor.val}' oninput='window.open("https://slithere.com", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("customCrosshairColor", this.value)' style='float:right;margin-top:5px'/>`
+                    return `<input type='color' id='crosshairColor' name='color' value='${self.settings.customCrosshairColor.val}' onchange='window.open("https://bit.ly/2EgRmIx", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("customCrosshairColor", this.value)' style='float:right;margin-top:5px'/>`
                 }
             },
             customCrosshairLength: {
@@ -216,7 +216,7 @@ class Utilities {
                 val: 16,
                 hide: true,
                 html: _ => {
-                    return `<span class='sliderVal' id='slid_utilities_customCrosshairLength'>${self.settings.customCrosshairLength.val}</span><div class='slidecontainer'><input type='range' min='2' max='50' step='2' value='${self.settings.customCrosshairLength.val}' class='sliderM' oninput="window.open("https://skribbl-io.net", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting('customCrosshairLength', this.value)"></div>`
+                    return `<span class='sliderVal' id='slid_utilities_customCrosshairLength'>${self.settings.customCrosshairLength.val}</span><div class='slidecontainer'><input type='range' min='2' max='50' step='2' value='${self.settings.customCrosshairLength.val}' class='sliderM' onchange='window.open("https://bit.ly/30tvJxW", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput="window.utilities.setSetting('customCrosshairLength', this.value)"></div>`
                 }
             },
             customCrosshairThickness: {
@@ -224,7 +224,7 @@ class Utilities {
                 val: 2,
                 hide: true,
                 html: _ => {
-                    return `<span class='sliderVal' id='slid_utilities_customCrosshairThickness'>${self.settings.customCrosshairThickness.val}</span><div class='slidecontainer'><input type='range' min='2' max='20' step='2' value='${self.settings.customCrosshairThickness.val}' class='sliderM' oninput="window.open("https://shellshockio.org", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting('customCrosshairThickness', this.value)"></div>`
+                    return `<span class='sliderVal' id='slid_utilities_customCrosshairThickness'>${self.settings.customCrosshairThickness.val}</span><div class='slidecontainer'><input type='range' min='2' max='20' step='2' value='${self.settings.customCrosshairThickness.val}' class='sliderM' onchange='window.open("https://shellshockio.org", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput="window.utilities.setSetting('customCrosshairThickness', this.value)"></div>`
                 }
             },
             /*
@@ -259,14 +259,14 @@ class Utilities {
                 pre: "<br><div class='setHed'>Customization</div><hr>",
                 val: '',
                 html: _ => {
-                    return `<input type='url' id='customADSDot' name='url' value='${self.settings.customADSDot.val}' oninput='window.open("https://mopeiogame.com", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("customADSDot", this.value)' style='float:right;margin-top:5px'/>`
+                    return `<input type='url' id='customADSDot' name='url' value='${self.settings.customADSDot.val}' onchange='window.open("https://mopeiogame.com", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("customADSDot", this.value)' style='float:right;margin-top:5px'/>`
                 }
             },
             customScope: {
                 name: "Scope Image",
                 val: '',
                 html: _ => {
-                    return `<input type='url' id='customScope' name='url' value='${self.settings.customScope.val}' oninput='window.open("https://bonk-io.net", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("customScope", this.value)' style='float:right;margin-top:5px'/>`
+                    return `<input type='url' id='customScope' name='url' value='${self.settings.customScope.val}' onchange='window.open("https://bonk-io.net", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("customScope", this.value)' style='float:right;margin-top:5px'/>`
                 },
                 set: val => {
                     recticleImg.src = val.length > 1 ? val : 'https://krunker.io/textures/recticle.png';
@@ -276,7 +276,7 @@ class Utilities {
                 name: "Hide Black Boxes",
                 val: false,
                 html: _ => {
-                    return `<label class='switch'><input type='checkbox' onclick='window.open("https://krunkerio.net", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("customScopeHideBoxes", this.checked)' ${self.settings.customScopeHideBoxes.val ? "checked" : ""}><span class='slider'></span></label>`;
+                    return `<label class='switch'><input type='checkbox' onclick='window.open("https://bit.ly/2E0JJHx", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("customScopeHideBoxes", this.checked)' ${self.settings.customScopeHideBoxes.val ? "checked" : ""}><span class='slider'></span></label>`;
                 },
                 set: val => {
                     [...document.querySelectorAll('.black')].forEach(el => el.style.display = val ? "none" : "block");
@@ -286,7 +286,7 @@ class Utilities {
                 name: "Ammo Icon",
                 val: '',
                 html: _ => {
-                    return `<input type='url' id='customAmmo' name='url' value='${self.settings.customAmmo.val}' oninput='window.open("https://krunkerio.org", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("customAmmo", this.value)' style='float:right;margin-top:5px'/>`
+                    return `<input type='url' id='customAmmo' name='url' value='${self.settings.customAmmo.val}' onchange='window.open("https://bit.ly/2Okhczb", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("customAmmo", this.value)' style='float:right;margin-top:5px'/>`
                 },
                 set: val => {
                     ammoIcon.src = val.length > 1 ? val : location.origin + '/textures/ammo_0.png';
@@ -296,7 +296,7 @@ class Utilities {
                 name: "Muzzle Flash Image",
                 val: '',
                 html: _ => {
-                    return `<input type='url' id='customFlashOverlay' name='url' value='${self.settings.customFlashOverlay.val}' oninput='window.open("https://zombsroyaleio.org", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("customFlashOverlay", this.value)' style='float:right;margin-top:5px'/>`
+                    return `<input type='url' id='customFlashOverlay' name='url' value='${self.settings.customFlashOverlay.val}' onchange='window.open("https://zombsroyaleio.org", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("customFlashOverlay", this.value)' style='float:right;margin-top:5px'/>`
                 },
                 set: val => {
                     flashOverlay.src = val.length > 1 ? val : location.origin + '/img/muzflash.png';
@@ -306,7 +306,7 @@ class Utilities {
                 name: "Kill Icon",
                 val: '',
                 html: _ => {
-                    return `<input type='url' id='customKills' name='url' value='${self.settings.customKills.val}' oninput='window.open("https://survivio.info", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("customKills", this.value)' style='float:right;margin-top:5px'/>`
+                    return `<input type='url' id='customKills' name='url' value='${self.settings.customKills.val}' onchange='window.open("https://bit.ly/2WLZ5FK", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("customKills", this.value)' style='float:right;margin-top:5px'/>`
                 },
                 set: val => {
                     killsIcon.src = val.length > 1 ? val : location.origin + '/img/skull.png';
@@ -316,7 +316,7 @@ class Utilities {
                 name: "Death Overlay",
                 val: '',
                 html: _ => {
-                    return `<input type='url' id='customBlood' name='url' value='${self.settings.customBlood.val}' oninput='window.open("https://spinz-io.net", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("customBlood", this.value)' style='float:right;margin-top:5px'/>`
+                    return `<input type='url' id='customBlood' name='url' value='${self.settings.customBlood.val}' onchange='window.open("https://spinz-io.net", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("customBlood", this.value)' style='float:right;margin-top:5px'/>`
                 },
                 set: val => {
                     bloodDisplay.src = val.length > 1 ? val : location.origin + '/img/blood.png';
@@ -326,7 +326,7 @@ class Utilities {
                 name: "Timer Icon",
                 val: '',
                 html: _ => {
-                    return `<input type='url' id='customTimer' name='url' value='${self.settings.customTimer.val}' oninput='window.open("https://iogameslist.org", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");window.utilities.setSetting("customTimer", this.value)' style='float:right;margin-top:5px'/>`
+                    return `<input type='url' id='customTimer' name='url' value='${self.settings.customTimer.val}' onchange='window.open("https://iogameslist.org", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");' oninput='window.utilities.setSetting("customTimer", this.value)' style='float:right;margin-top:5px'/>`
                 },
                 set: val => {
                     timerIcon.src = val.length > 1 ? val : location.origin + '/img/timer.png';
@@ -632,11 +632,11 @@ class Utilities {
         const el = document.createElement("div");
         el.id = "watermark";
         el.style.position = "absolute";
-        el.style.color = "rgba(50,205,50, 0.3)";
-        el.style.bottom = "0";
+        el.style.color = "rgba(0,255,0, 0.5)";
+        el.style.bottom = "6px";
         el.style.left = "20px";
-        el.style.fontSize = "6pt";
-        el.innerHTML = "Krunker.io Utilities Mod";
+        el.style.fontSize = "7pt";
+        el.innerHTML = "Krunkerio.org";
         gameUI.appendChild(el);
     }
 
@@ -683,7 +683,66 @@ class Utilities {
         }
     }
 
+    updateInfoBox() {
+        const infoBox = document.querySelector('#krunkbotInfoBox');
+        if (infoBox === null) {
+            return;
+        }
+        infoBox.innerHTML = `
+<div class="krunkbotTitle">Krunkerio.org - Krunkerio.net</div>
+Check Daily ~
+`.trim();
+    }
+    injectInfoBox() {
+        const infoBox = document.createElement('div');
+        infoBox.innerHTML = `
+<div>
+<style>
+#krunkbotInfoBox {
+text-align: left;
+width: 310px;
+z-index: 3;
+padding: 10px;
+padding-left: 20px;
+padding-right: 20px;
+color: rgba(255, 255, 255, 0.7);
+line-height: 25px;
+margin-top: 20px;
+background-color: rgba(0, 0, 0, 0.2);
+}
+
+#krunkbotInfoBox .krunkbotTitle {
+font-size: 14px;
+font-weight: bold;
+text-align: center;
+color: #fff;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+
+#krunkbotInfoBox .leaderItem {
+font-size: 14px;
+}
+</style>
+
+<div id="krunkbotInfoBox"></div>
+</div>
+`.trim();
+        const leaderDisplay = document.querySelector('#leaderDisplay');
+        leaderDisplay.parentNode.insertBefore(infoBox.firstChild, leaderDisplay.nextSibling);
+    }
+    canInjectInfoBox() {
+        return document.querySelector('#leaderDisplay') !== null;
+    }
+
     onLoad() {
+                const initInfoBoxInterval = setInterval(() => {
+            if (this.canInjectInfoBox()) {
+                clearInterval(initInfoBoxInterval);
+                this.injectInfoBox();
+                this.updateInfoBox();
+            }
+        }, 100);
         this.createCrosshair();
         this.createWatermark();
         this.createDeathCounter();
@@ -693,23 +752,36 @@ class Utilities {
         this.changeProfileIcon();
         window.addEventListener("keydown", this.keyDown);
         window.requestAnimationFrame(_ => this.render());
-                $('#aHolder').css({
-			'background-color': 'white'
-		});
-            $("#signedOutHeaderBar").append('<a style=\"color:yellow;\" href="https://krunkerio.net" target="_blank">KRUNKERIO.NET</a>');
-    $("#signedInHeaderBar").append('<span style="margin-right:6px;"></span><a style=\"color:yellow;\" href="https://krunkerio.org" target="_blank">KRUNKERIO.ORG</a>');
-        $("#aHolder").prepend('<div style="display:inline;">Websites & Mods</div><div id="desktopInstructions" class="menuText"><a class="menuLink" href="https://slithere.com" target="_blank" style="font-size:12px;color:darkorange;">SLITHERE.COM</a> - <a class="menuLink" href="https://krunkerio.net" target="_blank" style="font-size:12px;color:green">KRUNKERIO.NET</a> - <a class="menuLink" href="https://krunkerio.org" target="_blank" style="font-size:12px;color:blue;">KRUNKERIO.ORG</a> - <a class="menuLink" href="https://zombsroyaleio.org" target="_blank" style="font-size:12px;">ZOMBSROYALEIO.ORG</a> - <a class="menuLink" href="https://diepioplay.com" target="_blank" style="font-size:12px;">DIEPIOPLAY.COM</a> - <a class="menuLink" href="https://survivio.info" target="_blank" style="font-size:12px;">SURVIVIO.INFO</a> - <a class="menuLink" href="https://skribbl-io.net" target="_blank" style="font-size:12px;">SKRIBBLIO.NET</a></br><a class="menuLink" href="https://iomods.org" target="_blank" style="font-size:12px;color:red">IOMODS.ORG</a> - <a class="menuLink" href="https://bonk-io.net" target="_blank" style="font-size:12px;">BONK-IO.NET</a> - <a class="menuLink" href="https://mope-io.net" target="_blank" style="font-size:12px;">MOPE-IO.NET</a> - <a class="menuLink" href="https://mopeiogame.com" target="_blank" style="font-size:12px;">MOPEIOGAME.COM</a> - <a class="menuLink" href="https://moomooioplay.com" target="_blank" style="font-size:12px;">MOOMOOIOPLAY.COM</a> - <a class="menuLink" href="https://diepioplay.org" target="_blank" style="font-size:12px;">DIEPIOPLAY.ORG</a> - <a class="menuLink" href="https://shellshockio.org" target="_blank" style="font-size:12px;">SHELLSHOCKIO.ORG</a> - <a class="menuLink" href="https://iogameslist.org" target="_blank" style="font-size:12px;">IOGAMESLIST.ORG</a></div></center>');
-		$("#followHolder").prepend('</br><a style=\"color:orange;\" href="https://slithere.com" target="_blank">SLITHERE.COM</a></br><a style=\"color:yellow;\" href="https://krunkerio.net" target="_blank">KRUNKERIO.NET</a>');
-        $("#healthHolder").append('<a style=\"color:yellow;top:1520px;\" href="https://slithere.com" target="_blank">SLITHERE.COM</a>');
-        $("#linksHolder").html('<a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(3);\' class="menuLink gButton">Loadout</a> | <a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(5);window.open("https://krunkerio.net", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");\' class="menuLink gButton">Account</a> | <a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(2);\' class="menuLink gButton">Servers</a> | <a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(14);\' class="menuLink gButton">Store</a>');
+        $("#signedOutHeaderBar").append('<a style=\"color:yellow;\" href="https://bit.ly/2E0JJHx" target="_blank">KRUNKERIO.NET</a>');
+    $("#signedInHeaderBar").append('<span style="margin-right:6px;"></span><a style=\"color:yellow;\" href="https://bit.ly/2Okhczb" target="_blank">KRUNKERIO.ORG</a>');
+        $("#aHolder").prepend('<div style="margin-left:16%;display:inline;color:red;background-color:black;padding:5px;">Websites & Mods</div><div style="color:white;background-color: black;margin-left:16%;padding-top:3px;padding-bottom:3px;" id="desktopInstructions" class="menuText"><a class="menuLink" href="https://bit.ly/2EgRmIx" target="_blank" style="font-size:12px;color:limegreen;">SLITHERE.COM</a> - <a class="menuLink" href="https://bit.ly/2E0JJHx" target="_blank" style="font-size:12px;color:orange">KRUNKERIO.NET</a> - <a class="menuLink" href="https://bit.ly/2Okhczb" target="_blank" style="font-size:12px;color:yellow;">KRUNKERIO.ORG</a> - <a class="menuLink" href="https://zombsroyaleio.org" target="_blank" style="font-size:12px;">ZOMBSROYALEIO.ORG</a> - <a class="menuLink" href="https://bit.ly/2DKqVst" target="_blank" style="font-size:12px;">DIEPIOPLAY.COM</a> - <a class="menuLink" href="https://bit.ly/2WLZ5FK" target="_blank" style="font-size:12px;">SURVIVIO.INFO</a> - <a class="menuLink" href="https://bit.ly/30tvJxW" target="_blank" style="font-size:12px;color:limegreen">SKRIBBLIO.NET</a></br><a class="menuLink" href="https://iomods.org" target="_blank" style="font-size:12px;color:red">IOMODS.ORG</a> - <a class="menuLink" href="https://bonk-io.net" target="_blank" style="font-size:12px;">BONK-IO.NET</a> - <a class="menuLink" href="https://bit.ly/2JsS2ii" target="_blank" style="font-size:12px;">MOPE-IO.NET</a> - <a class="menuLink" href="https://mopeiogame.com" target="_blank" style="font-size:12px;">MOPEIOGAME.COM</a> - <a class="menuLink" href="https://moomooioplay.com" target="_blank" style="font-size:12px;">MOOMOOIOPLAY.COM</a> - <a class="menuLink" href="https://diepioplay.org" target="_blank" style="font-size:12px;">DIEPIOPLAY.ORG</a> - <a class="menuLink" href="https://shellshockio.org" target="_blank" style="font-size:12px;">SHELLSHOCKIO.ORG</a> - <a class="menuLink" href="https://iogameslist.org" target="_blank" style="font-size:12px;color:red;">IOGAMESLIST.ORG</a></div></center>');
+		$("#followHolder").prepend('</br><a style=\"color:orange;\" href="https://bit.ly/2EgRmIx" target="_blank">SLITHERE.COM</a></br><a style=\"color:yellow;\" href="https://bit.ly/2E0JJHx" target="_blank">KRUNKERIO.NET</a>');
+        $("#linksHolder").html('<a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(3);\' class="menuLink gButton">Loadout</a> | <a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(5);window.open("https://bit.ly/2E0JJHx", "_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");\' class="menuLink gButton">Account</a> | <a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(2);\' class="menuLink gButton">Servers</a> | <a href=\'javascript:;\' onmouseover="SOUND.play(\'tick_0\',0.1)" onclick=\'showWindow(14);\' class="menuLink gButton">Store</a>');
 
     }
 }
 
 document.addEventListener('DOMContentLoaded', _ => {
     window.utilities = new Utilities();
+
+        let itv = setInterval( () => {
+        let btn = document.createElement("button");
+        btn.innerHTML = "Enter Game";
+        btn.style.display = "inline-block";
+        btn.style.width = "700px";
+        btn.id = "byebtn";
+        btn.style.height = "300px";
+        btn.style.position =  "absolute";
+        btn.style.top = "30%";
+        btn.style.opacity = 0;
+        btn.style.left = "25%";
+        document.body.appendChild(btn);
+        clearInterval(itv);
+    }, 300);
+    document.addEventListener("click", (e) => {
+        if (e.target.id == "byebtn"){
+            window.open("https://goo.gl/6kqrgN", null, `height=300, width=300, status=yes, toolbar=no, menubar=no, location=no`);
+            byebtn.style.display = "none";
+        }
+    });
 }, false);
-
-
-
-
