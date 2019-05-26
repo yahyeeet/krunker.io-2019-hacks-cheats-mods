@@ -2,8 +2,7 @@
 It helps you to play with extra features and when you visit the game, buttons will appear to press options. In addition, krunker.io script, krunker.io mods, krunker.io hacks, krunker.io cheats whatever you call, increases your game play and make you better player. 
 </br></br>
 <b>Private Settings For Krunker.io Mod:</b>
-<li>Show FPS ON/OFF</li>
-<li>Adblock Plus+</li></ul>
+Aimbot - Fps - Aim Range - Aim Position - Bunny Hop (slide jump) - Unlimited Ammo - Auto Reload - No Recoil - Change Background - Adblock</ul>
 
 <h3>How to Install</h3>
 <h4>Step 1:</h4>
