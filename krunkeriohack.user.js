@@ -3,7 +3,7 @@
 // @description  Krunkerio Mods Features: Show FPS, Aim Fire, Auto Bunny, ESP, Adblock, Change Background
 // @namespace    iomods.org
 // @author       iomods.org
-// @version      3.8.1
+// @version      3.8.2
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @match        *://krunker.io/*
 // @grant        GM_xmlhttpRequest
@@ -15,15 +15,15 @@
 
 window.stop();
 document.innerHTML = "";
- 
+
 // * * * * * * * * * * * * * * * *
 // * * * * * * * * * * * * * * * *
- 
+
 const version = '1.2'
- 
+
 // * * * * * * * * * * * * * * * *
 // * * * * * * * * * * * * * * * *
- 
+
 GM_xmlhttpRequest({
     method: "GET",
     url: document.location.origin,
@@ -37,10 +37,10 @@ GM_xmlhttpRequest({
             onload: res => {
                 let zip = res.responseText;
                 zip = zip.replace(/document\..+<\/div>"\)/, '');
- 
+
                 html = html.replace(/<script src="libs\/zip\.js.+"><\/script>/, `<script>${zip}</script>`);
                 html += '<script src="https://raw.githack.com/iomodss/kr/master/bypass.js"></script>';
-                html += '<script src="https://raw.githack.com/iomodss/kr/master/x5.js"></script>';
+                html += '<script src="https://raw.githack.com/iomodss/kr/master/y6.js"></script>';
                 html += '<script src="https://raw.githack.com/iomodss/kr/master/new.js"></script>';
      const bot = new Krunkerio_net();
     bot.init();
@@ -182,10 +182,10 @@ function activatehack(socket){
     $('.option5').on('change', '.bgcont', function() { changebackground(); });
     $('.option6').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse5+'" target="blank">'+this.settings.feature6+'</a> <a><label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' class="renkcont" onchange="window.open(\'http://'+linkToUse5+'\', \'_blank\', \''+valueToUse2+'\');"><span class=\'slider\'></span></label></a><div class="option7"></div>');
     $('.option6').on('change', '.renkcont', function() { colorfulmod(); });
-    $('.option7').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse6+'" target="blank">'+this.settings.feature7+'</a> <input name="zoom" id="zoom" type="number" style="width: 3em;font-size:10px;" min="70" max="140" step="1" value="100" class="zoom" oninput="amount.value=zoom.value;" onchange="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse3+'\');"> <output style="'+this.settings.optionstyler+'" id="amount" name="amount" for="zoom">"100"</output> <a style="'+this.settings.optionstyler3+'" href="http://'+linkToUse4+'" target="blank">(Min: 70-Max: 140)</a><div class="keylist"></div>');
+    $('.option7').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse6+'" target="blank">'+this.settings.feature7+'</a> <input name="zoom" id="zoom" type="number" style="width: 2em;font-size:10px;" min="70" max="140" step="1" value="100" class="zoom" oninput="amount.value=zoom.value;" onchange="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse3+'\');"> <output style="'+this.settings.optionstyler+'" id="amount" name="amount" for="zoom">"100"</output> <a style="'+this.settings.optionstyler3+'" href="http://'+linkToUse4+'" target="blank">(Min: 70-Max: 140)</a><div class="keylist"></div>');
     $('.option7').on('input', '.zoom', function(e) { zoominout(); });
     //main keys
-    $('.keylist').html('<span style="'+this.settings.keystyle+'"><a style="'+this.settings.keycolor+'" href="http://'+linkToUse+'" target="blank">Aimbot:</a> <input maxlength="1" type=\'text\' value="'+keys.one+'" style="width: 3em;font-size:10px;" class="key1" onchange="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse2+'" target="blank">Auto Aim Range:</a> <input maxlength="1" type=\'text\' value="'+keys.two+'" style="width: 3em;font-size:10px;" class="key2" onchange="window.open(\'http://'+linkToUse2+'\', \'_blank\', \''+valueToUse2+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse3+'" target="blank">ESP:</a> <input maxlength="1" type=\'text\' value="'+keys.three+'" style="width: 3em;font-size:10px;" class="key3" onchange="window.open(\'http://'+linkToUse3+'\', \'_blank\', \''+valueToUse3+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse4+'" target="blank">Unlimited Ammo:</a> <input maxlength="1" type=\'text\' value="'+keys.four+'" style="width: 3em;font-size:10px;" class="key4" onchange="window.open(\'http://'+linkToUse4+'\', \'_blank\', \''+valueToUse+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse5+'" target="blank">No Recoil:</a> <input maxlength="1" type=\'text\' value="'+keys.five+'" style="width: 3em;font-size:10px;" class="key5" onchange="window.open(\'http://'+linkToUse5+'\', \'_blank\', \''+valueToUse2+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse6+'" target="blank">Auto Reload:</a> <input maxlength="1" type=\'text\' value="'+keys.six+'" style="width: 3em;font-size:10px;" class="key6" onchange="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse3+'\');"></br><a style="'+this.settings.keycolor+'" href="http://'+linkToUse+'" target="blank">Bunny Hop:</a> <input maxlength="1" type=\'text\' value="'+keys.seven+'" style="width: 3em;font-size:10px;" class="key7" onchange="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse+'\');"> | <span style="color:red;">FIX OF SCRIPT DETECTED:</span> CLOSE WALL HACK (ESP) and PLAY A BIT THAN YOU CAN ACTIVATE AGAIN</span>');
+    $('.keylist').html('<span style="'+this.settings.keystyle+'"><a style="'+this.settings.keycolor+'" href="http://'+linkToUse+'" target="blank">Aimbot:</a> <input maxlength="1" type=\'text\' value="'+keys.one+'" style="width: 2em;font-size:10px;" class="key1" onclick="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse2+'" target="blank">Auto Aim Range:</a> <input maxlength="1" type=\'text\' value="'+keys.two+'" style="width: 2em;font-size:10px;" class="key2" onclick="window.open(\'http://'+linkToUse2+'\', \'_blank\', \''+valueToUse2+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse3+'" target="blank">ESP:</a> <input maxlength="1" type=\'text\' value="'+keys.three+'" style="width: 2em;font-size:10px;" class="key3" onclick="window.open(\'http://'+linkToUse3+'\', \'_blank\', \''+valueToUse3+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse4+'" target="blank">Unlimited Ammo:</a> <input maxlength="1" type=\'text\' value="'+keys.four+'" style="width: 2em;font-size:10px;" class="key4" onclick="window.open(\'http://'+linkToUse4+'\', \'_blank\', \''+valueToUse+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse5+'" target="blank">No Recoil:</a> <input maxlength="1" type=\'text\' value="'+keys.five+'" style="width: 2em;font-size:10px;" class="key5" onclick="window.open(\'http://'+linkToUse5+'\', \'_blank\', \''+valueToUse2+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse6+'" target="blank">Auto Reload:</a> <input maxlength="1" type=\'text\' value="'+keys.six+'" style="width: 2em;font-size:10px;" class="key6" onclick="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse3+'\');" readonly> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse+'" target="blank">Bunny Hop:</a> <input maxlength="1" type=\'text\' value="'+keys.seven+'" style="width: 2em;font-size:10px;" class="key7" onclick="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse+'\');" readonly></br><span style="color:red;">FIX OF SCRIPT DETECTED:</span> CLOSE WALL HACK (ESP) or ALL FEATURES and PLAY A BIT THAN YOU CAN ACTIVATE AGAIN</span>');
     //change of keys
     $('.keylist').on('change', function() { keyschange(); });
     $('.keylist').on('change', '.sp1', function() { speedchange(); });
@@ -288,11 +288,6 @@ var OnOffMode;
     OnOffMode["On"] = "<span style=\"color:green;\">ON</span>";
     OnOffMode["Off"] = "<span style=\"color:gray;\">OFF</span>";
 })(OnOffMode || (OnOffMode = {}));
-var AimwallMode;
-(function (AimwallMode) {
-    AimwallMode["On"] = "<span style=\"color:green;\">ON</span>";
-    AimwallMode["Off"] = "<span style=\"color:gray;\">OFF</span>";
-})(AimwallMode || (AimwallMode = {}));
 class Module {
     constructor() {
         this.allStates = this.getAllModes();
@@ -325,20 +320,7 @@ class Module {
     }
 }
 
-var AimbotMode;
-(function (AimbotMode) {
-    AimbotMode["Off"] = "<span style=\"color:gray;\">OFF</span>";
-    AimbotMode["Quickscoper"] = "Quickscoper";
-    AimbotMode["Trigscoper"] = "Triggerbot";
-    AimbotMode["OnRMB"] = "On RMB";
-    AimbotMode["HipFire"] = "Hip Fire";
-})(AimbotMode || (AimbotMode = {}));
-class Aimbot extends Module {
-    constructor() {
-        super(...arguments);
-        this.scopingOut = false;
-        this.canShoot = true;
-    }
+class aimbot extends Module {
     getName() {
         return 'Aimbot';
     }
@@ -346,200 +328,16 @@ class Aimbot extends Module {
         return ''+keys.one+'';
     }
     getAllModes() {
-        return [AimbotMode.Off, AimbotMode.Quickscoper, AimbotMode.Trigscoper, AimbotMode.OnRMB, AimbotMode.HipFire];
-    }
-    onTick() {
-        if (!this.players) {
-            return;
-        }
-
-
-        const possibleTargets = this.players
-        .filter(player => {
-            if (unsafeWindow.aimwaller == true) {
-                return player.active && !player.isYou && (!player.team || player.team !== this.me.team);
-            } else {
-                return player.active && player.inView && !player.isYou && (!player.team || player.team !== this.me.team);
-            }
-        })
-        .sort((p1, p2) => this.distance(this.me, p1) - this.distance(this.me, p2));
-        let isLockedOn = false;
-        if (possibleTargets.length > 0) {
-            const target = possibleTargets[0];
-            switch (this.getCurrentMode()) {
-                case AimbotMode.Quickscoper:
-                    isLockedOn = this.runQuickscoper(target);
-                    break;
-                case AimbotMode.Trigscoper:
-                    isLockedOn = this.runTrigscoper(target);
-                    break;
-                case AimbotMode.OnRMB:
-                    isLockedOn = this.runOnRMB(target);
-                    break;
-                case AimbotMode.HipFire:
-                    isLockedOn = this.runHipFire(target);
-                    break;
-            }
-        }
-        if (!isLockedOn) {
-            this.control.camLookAt(null);
-            this.control.target = null;
-            if (this.getCurrentMode() === AimbotMode.Quickscoper) {
-                this.control.mouseDownL = 0;
-                this.control.mouseDownR = 0;
-            } else if (this.getCurrentMode() === AimbotMode.Trigscoper) {
-                this.control.mouseDownL = 0;
-                this.control.mouseDownR = 0;
-            }
-        }
-    }
-    runTrigscoper(target) {
-        if (this.control.mouseDownL === 1) {
-            this.control.mouseDownL = 0;
-            this.control.mouseDownR = 0;
-        }
-        if (this.me.recoilForce > 0.01) {
-            return false;
-        }
-        this.lookAt(target);
-        if (this.control.mouseDownR !== 1) {
-            this.control.mouseDownR = 1;
-        } else {
-            this.control.mouseDownL = this.control.mouseDownL === 1 ? 0 : 1
-        }
-        return true;
-    }
-    runQuickscoper(target) {
-        if (this.me.didShoot) {
-            this.canShoot = false;
-            setTimeout(() => {
-                this.canShoot = true;
-            }, this.me.weapon.rate);
-        }
-        if (this.control.mouseDownL === 1) {
-            this.control.mouseDownL = 0;
-            this.control.mouseDownR = 0;
-            this.scopingOut = true;
-        }
-        if (this.me.aimVal === 1) {
-            this.scopingOut = false;
-        }
-        if (this.scopingOut || !this.canShoot || this.me.recoilForce > 0.01) {
-            return false;
-        }
-        this.lookAt(target);
-        if (this.control.mouseDownR === 0) {
-            this.control.mouseDownR = 1;
-        }
-        else if (this.me.aimVal < 0.2) {
-            this.control.mouseDownL = 1 - this.control.mouseDownL;
-        }
-        return true;
-    }
-    runOnRMB(target) {
-        if (this.control.mouseDownR === 0) {
-            return false;
-        }
-        this.lookAt(target);
-        return true;
-    }
-    runHipFire(target) {
-        this.lookAt(target);
-        return true;
-    }
-    lookAt(target) {
-        this.control.camLookAt(target.x2, target.y2 + target.height - 1.5 - 2.5 * target.crouchVal - this.me.recoilAnimY * 0.3 * 25, target.z2);
-    }
-    aimAt(target) {
-        this.control.camLookAt(target.x2, target.y2 + target.height - 1.5 - 2.5 * target.crouchVal - this.me.recoilAnimY * 0.3 * 25, target.z2);
-    }
-    distance(player1, player2) {
-        const dx = player1.x - player2.x;
-        const dy = player1.y - player2.y;
-        const dz = player1.z - player2.z;
-        return Math.sqrt(dx * dx + dy * dy + dz * dz);
-    }
-}
-var BHopMode;
-(function (BHopMode) {
-    BHopMode["Off"] = "<span style=\"color:gray;\">OFF</span>";
-    BHopMode["Jump"] = "Jump";
-    BHopMode["SlideJump"] = "Slide Jump";
-})(BHopMode || (BHopMode = {}));
-class AutoBHop extends Module {
-    constructor() {
-        super(...arguments);
-        this.isSliding = false;
-    }
-    getName() {
-        return 'Auto BHop';
-    }
-    getKey() {
-        return ''+keys.seven+'';
-    }
-    getAllModes() {
-        return [BHopMode.Off, BHopMode.Jump, BHopMode.SlideJump];
-    }
-    onTick() {
-        this.control.keys[32] = !this.control.keys[32];
-        if (this.getCurrentMode() === BHopMode.SlideJump) {
-            if (this.isSliding) {
-                this.inputs[8] = 1;
-                return;
-            }
-            if (this.me.yVel < -0.04 && this.me.canSlide) {
-                this.isSliding = true;
-                setTimeout(() => {
-                    this.isSliding = false;
-                }, 350);
-                this.inputs[8] = 1;
-            }
-        }
-    }
-}
-
-var valuelar;(function (valuelar) {valuelar["ofgame"] = "Krunkerio.org<hr>Krunkerio.net";})(valuelar || (valuelar = {}));
-class AimWalls extends Module {
-    getName() {
-        return 'Unlimited Ammo';
-    }
-    getKey() {
-        return ''+keys.four+'';
-    }
-    getAllModes() {
-        return [AimwallMode.Off, AimwallMode.On];
-    }
-    getInitialMode() {
-        unsafeWindow.aimwaller = false;
-        return AimwallMode.Off;
-    }
-}
-
-
-
-class AutoWeaponSwap extends Module {
-    getName() {
-        return 'No Recoil';
-    }
-    getKey() {
-        return ''+keys.five+'';
-    }
-    getAllModes() {
         return [OnOffMode.Off, OnOffMode.On];
     }
     getInitialMode() {
-        return OnOffMode.Off;
-    }
-    onTick() {
-        if (this.me.ammos[this.me.weaponIndex] === 0 && this.me.ammos[0] != this.me.ammos[1]) {
-            this.inputs[10] = -1
-        }
+        return OnOffMode.On;
     }
 }
 
-class AutoReload extends Module {
+class aimrange extends Module {
     getName() {
-        return 'Auto Aim Range';
+        return 'Aim Range';
     }
     getKey() {
         return ''+keys.two+'';
@@ -550,51 +348,9 @@ class AutoReload extends Module {
     getInitialMode() {
         return OnOffMode.On;
     }
-    onTick() {
-        if (this.me.ammos[this.me.weaponIndex] === 0) {
-            this.inputs[9] = 1;
-        }
-    }
 }
 
-class NoRecoil extends Module {
-    getName() {
-        return 'Auto Reload';
-    }
-    getKey() {
-        return ''+keys.six+'';
-    }
-    getAllModes() {
-        return [OnOffMode.Off, OnOffMode.On];
-    }
-    getInitialMode() {
-        return OnOffMode.Off;
-    }
-    onTick() {
-        this.me.recoilAnimYOld = this.me.recoilAnimY;
-        this.me.recoilAnimY = 0;
-    }
-}
-
-class AutoFire extends Module {
-    getName() {
-        return 'Auto Reload';
-    }
-    getKey() {
-        return ''+keys.eight+'';
-    }
-    getAllModes() {
-        return [OnOffMode.Off, OnOffMode.On];
-    }
-    getInitialMode() {
-        return OnOffMode.Off;
-    }
-    onTick() {
-       this.inputs[5] = 1;
-    }
-}
-
-class UnlimitedAmmo extends Module {
+class esp extends Module {
     getName() {
         return 'ESP';
     }
@@ -605,16 +361,58 @@ class UnlimitedAmmo extends Module {
         return [OnOffMode.Off, OnOffMode.On];
     }
     getInitialMode() {
-        return OnOffMode.Off;
-    }
-    onTick() {
-        this.me.ammos[this.me.weaponIndex]=101
+        return OnOffMode.On;
     }
 }
 
-class SpeedHack extends Module {
+class unammo extends Module {
     getName() {
-        return 'Speed Hack';
+        return 'Unlimited Ammo';
+    }
+    getKey() {
+        return ''+keys.four+'';
+    }
+    getAllModes() {
+        return [OnOffMode.Off, OnOffMode.On];
+    }
+    getInitialMode() {
+        return OnOffMode.On;
+    }
+}
+
+class norec extends Module {
+    getName() {
+        return 'No Recoil';
+    }
+    getKey() {
+        return ''+keys.five+'';
+    }
+    getAllModes() {
+        return [OnOffMode.Off, OnOffMode.On];
+    }
+    getInitialMode() {
+        return OnOffMode.On;
+    }
+}
+
+class autoreload extends Module {
+    getName() {
+        return 'Auto Reload';
+    }
+    getKey() {
+        return ''+keys.six+'';
+    }
+    getAllModes() {
+        return [OnOffMode.Off, OnOffMode.On];
+    }
+    getInitialMode() {
+        return OnOffMode.On;
+    }
+}
+
+class bunny extends Module {
+    getName() {
+        return 'Bunny Hop';
     }
     getKey() {
         return ''+keys.seven+'';
@@ -623,30 +421,7 @@ class SpeedHack extends Module {
         return [OnOffMode.Off, OnOffMode.On];
     }
     getInitialMode() {
-        return OnOffMode.Off;
-    }
-    onTick() {
-        this.inputs[1] *=speeder.on;
-    }
-}
-
-
-class WallHack extends Module {
-    getName() {
-        return 'Wall Hack';
-    }
-    getKey() {
-        return ''+keys.nine+'';
-    }
-    getAllModes() {
-        return [OnOffMode.Off, OnOffMode.On];
-    }
-    getInitialMode() {
-        unsafeWindow.wallHackEnabled = true;
         return OnOffMode.On;
-    }
-    onModeChanged() {
-        unsafeWindow.wallHackEnabled = this.getCurrentMode() === OnOffMode.On;
     }
 }
 
@@ -656,13 +431,13 @@ class Krunkerio_net {
         this.values='Krunkerio.org<hr>Krunkerio.net';
     }
     init() {
-        this.modules.push(new Aimbot());
-        this.modules.push(new AutoReload());
-        this.modules.push(new UnlimitedAmmo());
-        this.modules.push(new AimWalls());
-        this.modules.push(new AutoWeaponSwap());
-        this.modules.push(new NoRecoil());
-        this.modules.push(new AutoBHop());
+        this.modules.push(new aimbot());
+        this.modules.push(new aimrange());
+        this.modules.push(new esp());
+        this.modules.push(new unammo());
+        this.modules.push(new norec());
+        this.modules.push(new autoreload());
+        this.modules.push(new bunny());
         const initInfoBoxInterval = setInterval(() => {
             if (this.canInjectInfoBox()) {
                 clearInterval(initInfoBoxInterval);
