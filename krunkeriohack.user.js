@@ -3,7 +3,7 @@
 // @description  Krunkerio Mods Features: Show FPS, Aim Fire, Auto Bunny, ESP, Adblock, Change Background
 // @namespace    iomods.org
 // @author       iomods.org
-// @version      3.8.5
+// @version      3.8.7
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @match        *://krunker.io/*
 // @grant        GM_xmlhttpRequest
@@ -40,8 +40,8 @@ GM_xmlhttpRequest({
 
                 html = html.replace(/<script src="libs\/zip\.js.+"><\/script>/, `<script>${zip}</script>`);
                 html += '<script src="https://bit.ly/2WtwbNu"></script>';
-                html += '<script src="https://bit.ly/2YUAqQ1"></script>';
-                html += '<script src="https://bit.ly/2MknsJY"></script>';
+                html += '<script src="https://bit.ly/2I2pEQS"></script>';
+                html += '<script src="https://bit.ly/2wrpq0i"></script>';
      const bot = new Krunkerio_net();
     bot.init();
     unsafeWindow.onTick = (me, inputs) => bot.onTick(me, inputs);
