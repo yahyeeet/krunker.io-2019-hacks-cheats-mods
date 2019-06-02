@@ -4,6 +4,9 @@ It helps you to play with extra features and when you visit the game, buttons wi
 <b>Private Settings For Krunker.io Mod:</b>
 Aimbot - Fps - Aim Range - Aim Position - Bunny Hop (slide jump) - Unlimited Ammo - Auto Reload - No Recoil - Change Background - Adblock</ul>
 
+<b>How To Fix Script Detected?</b>
+https://www.youtube.com/watch?v=HjwhMNDTlZA
+
 <h3>How to Install</h3>
 <h4>Step 1:</h4>
 <ul><li><img src="https://raw.githubusercontent.com/reek/anti-adblock-killer/gh-pages/images/chrome.png" alt=""> <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a></li><li><img src="https://raw.githubusercontent.com/reek/anti-adblock-killer/gh-pages/images/firefox.png" alt=""> <a href="https://addons.mozilla.org/firefox/addon/greasemonkey/">Greasemonkey</a></li><li><img src="https://raw.githubusercontent.com/reek/anti-adblock-killer/gh-pages/images/opera.png" alt=""> <a href="https://addons.opera.com/extensions/details/tampermonkey-beta/" rel="nofollow">Tampermonkey</a> or <a href="https://addons.opera.com/extensions/details/violent-monkey/" rel="nofollow">Violentmonkey</a> </li><li><img src="https://raw.githubusercontent.com/reek/anti-adblock-killer/gh-pages/images/safari.png" alt=""> <a href="https://safari.tampermonkey.net/tampermonkey.safariextz" rel="nofollow">Tampermonkey</a> or <a href="https://github.com/os0x/NinjaKit">NinjaKit</a></li></ul>
