@@ -3,8 +3,8 @@ It helps you to play with extra features and when you visit the game, buttons wi
 </br></br>
 <b>Private Settings For Krunker.io Mod:</b>
 Aimbot - Fps - Aim Range - Aim Position - Bunny Hop (slide jump) - Unlimited Ammo - Auto Reload - No Recoil - Change Background - Adblock</ul>
-</br>
-<b>How To Fix Script Detected?</b>
+</br></br>
+<b>How To Fix Script Detected?</b></br>
 https://www.youtube.com/watch?v=HjwhMNDTlZA
 
 <h3>How to Install</h3>
