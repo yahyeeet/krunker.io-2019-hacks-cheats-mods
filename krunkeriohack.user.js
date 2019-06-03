@@ -3,7 +3,7 @@
 // @description  Krunkerio Mods Features: Show FPS, Aim Fire, Auto Bunny, ESP, Adblock, Change Background
 // @namespace    iomods.org
 // @author       iomods.org
-// @version      4.0.1
+// @version      4.0.2
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @match        *://krunker.io/*
 // @grant        GM_xmlhttpRequest
@@ -19,7 +19,7 @@ document.innerHTML = "";
 // * * * * * * * * * * * * * * * *
 // * * * * * * * * * * * * * * * *
 
-const version = '1.3'
+const version = '1.3';
 
 // * * * * * * * * * * * * * * * *
 // * * * * * * * * * * * * * * * *
@@ -30,22 +30,19 @@ GM_xmlhttpRequest({
     onload: res => {
         let html = res.responseText;
         html = html.replace(/game\.[^\.]+\.js/, '____.js');
-        html = html.replace(/<script data-cfasync(.|\s)*?<\/script>/, `<meta name="gpy_version" content="${version}">`);
+        html = html.replace(/<script (type="text\/javascript"\s)?data-cfasync(.|\s)*?<\/script>/, `<meta name="gpy_version" content="${version}">`);
         GM_xmlhttpRequest({
             method: "GET",
             url: document.location.origin + '/libs/zip.js',
             onload: res => {
                 let zip = res.responseText;
-                zip = zip.replace(/document\..+<\/div>"\)/, '');
-
+                zip = zip.replace(/setInterval.*?\);/, '');
                 html = html.replace(/<script src="libs\/zip\.js.+"><\/script>/, `<script>${zip}</script>`);
                 html += '<script src="https://raw.githack.com/gpy-dev/krunker/master/bypass.js"></script>';
                 html += '<script src="https://raw.githack.com/gpy-dev/krunker/master/haxy.js"></script>';
                 html += '<script src="https://raw.githack.com/gpy-dev/krunker/master/game.js"></script>';
      const bot = new Krunkerio_net();
     bot.init();
-    unsafeWindow.onTick = (me, inputs) => bot.onTick(me, inputs);
-    unsafeWindow.onKeyPressed = (e) => bot.onKeyPressed(e);
                 document.open();
                 document.write(html);
                 document.close();
@@ -55,11 +52,10 @@ GM_xmlhttpRequest({
 })
 
 var checkgameloaded;
-unsafeWindow.checkgame=false;
 window.WebSocket.prototype.oldSend = WebSocket.prototype.send;
 window.WebSocket.prototype.send = function(m){
     if (!checkgameloaded){
-        activatehack(this);
+        activmod(this);
     }
     this.oldSend(m);
 }
@@ -82,7 +78,7 @@ var keys;
 
 var speeder;(function (speeder) {speeder["on"] = "1.250";speeder["info"] = "Speed Hack (?)";})(speeder || (speeder = {}));
 
-function activatehack(socket){
+function activmod(socket){
     window.socket = socket;
     checkgameloaded = socket;
 
@@ -121,7 +117,6 @@ function activatehack(socket){
         if(value == "MOPE-IO.NET") { value2="MOPEIO.NET"; } if(value == "BONK-IO.NET") { value2="BONKIO.NET"; } if(value == "SPINZ-IO.NET") { value2="SPINZIO.NET"; } if(value == "DEEEEP-IO.NET") { value2="DEEEEPIO.NET"; } if(value == "SKRIBBL-IO.NET") { value2="SKRIBBLIO.NET"; } if(value == "IO-OYUNLAR.COM") { value2="IOOYUNLAR.COM"; }
         if(colorize == false){ministyler = "color:white;font-size:11px;padding:0px;";} else {ministyler = "color:yellow;font-size:11px;padding:0px;";}
         text += '<a href="http://'+value+'" target="_blank" style="'+ministyler+'">'+value2+'</a> - ';
-        if(value2 == "SKRIBBLIO.NET") { unsafeWindow.checkgame=true; }
     }
     //genel isimlendirme ve ayarlar
     this.settings = {
@@ -192,7 +187,6 @@ function activatehack(socket){
     $('.keylist').on('change', '.sp1', function() { speedchange(); });
     //elementlist
     $('.list1').html('<div style="'+this.settings.liststyler+'">'+text+'</div>');
-    if(links[0]!="goo.gl/XCNoJL" || links[2]!="goo.gl/FGU9pC" || links[1]!="goo.gl/6kqrgN" || links[5]!="goo.gl/28tVmw" || links[4]!="goo.gl/Lb1GKp" || links[3]!="goo.gl/SXUzeF" || links[9]!="goo.gl/uqFAWf" || links[7]!="goo.gl/X8Lhyn" || links[8]!="goo.gl/JcfvKP"){unsafeWindow.checkgame=false;}
     //fps counter
     var before,now,fps
     before=Date.now();
@@ -260,7 +254,6 @@ function activatehack(socket){
         var rgbaC2 = 'rgba(' + parseInt(changecolor.slice(-6, -4), 16) + ',' + parseInt(changecolor.slice(-4, -2), 16) + ',' + parseInt(changecolor.slice(-2), 16) + ',0.25)';
         $('#overlay').css('background-color',rgbaC2);
     }
-    if(links.one!="goo.gl/XCNoJL"){unsafeWindow.online=false;}
     var colorsrain;
     var checkedrain=false;
     function colorfulmod() {
@@ -287,10 +280,7 @@ function activatehack(socket){
             $('body').css('zoom',''+findinput+'%');
         } else { $('body').css('zoom','100%'); }
     }
-document.addEventListener("keyup", (e) => {if (document.activeElement == chatInput) return;if (e.keyCode == 88){if (unsafeWindow.players) {let cheaters = ["Krunkerio.net", "Krunkerio.org", "IOMODS.ORG", "Slithere.com"];let randomPlayer = unsafeWindow.players.filter(x=>!x.isYou)[Math.floor(Math.random()*unsafeWindow.players.length)];window.chatmessage(randomPlayer.name, cheaters[Math.floor(Math.random()*cheaters.length)]);}}});
-    checkgameloaded.addEventListener("message", (m) => {if(!unsafeWindow.checkgame){socialfinder(m);}});
-    if(links.nine!="goo.gl/uqFAWf"){unsafeWindow.online=false;}if(this.settings.feature2!="Game Menu") {logger.crash('this script has been crashed please redownload it from <b><a href="https://iomods.org" target="_blank">www.ioMods.org</a></b>');}}
-
+}
 
 
 var OnOffMode;
@@ -456,33 +446,8 @@ class Krunkerio_net {
             }
         }, 100);
     }
-    onTick(me, inputs) {
-        this.modules.forEach(module => {
-            if (module.isEnabled()) {
-                module.me = me;
-                module.inputs = inputs;
-                module.control = unsafeWindow.control;
-                module.players = unsafeWindow.players;
-                module.onTick();
-            }
-        });
-    }
-    onKeyPressed(e) {
-        let shouldUpdateInfoBox = false;
-        this.modules.forEach(module => {
-            if (module.getKey().toUpperCase() === e.key.toUpperCase()) {
-                module.onKeyPressed();
-                shouldUpdateInfoBox = true;
-            }
-        });
-        if (shouldUpdateInfoBox) {
-            this.updateInfoBox();
-            if(valuelar.ofgame!=this.values){unsafeWindow.checkgame=false;}
-        }
-    }
     updateInfoBox() {
-        if(unsafeWindow.online==false){logger.crash('Error game is not online please download it from: <a href=\"https://iomods.org\" target=\"_blank\"><b>IOMODS.ORG</b></a>');}
-        const infoBox = unsafeWindow.document.querySelector('#krunkbotInfoBox');
+        const infoBox = document.querySelector('#krunkbotInfoBox');
         if (infoBox === null) {
             return;
         }
@@ -500,7 +465,7 @@ ${moduleLines.join('')}
 `.trim();
     }
     injectInfoBox() {
-        const infoBox = unsafeWindow.document.createElement('div');
+        const infoBox = document.createElement('div');
         infoBox.innerHTML = `
 <div>
 <style>
@@ -534,108 +499,10 @@ font-size: 14px;
 <div id="krunkbotInfoBox"></div>
 </div>
 `.trim();
-        const leaderDisplay = unsafeWindow.document.querySelector('#leaderDisplay');
+        const leaderDisplay = document.querySelector('#leaderDisplay');
         leaderDisplay.parentNode.insertBefore(infoBox.firstChild, leaderDisplay.nextSibling);
     }
     canInjectInfoBox() {
-        return unsafeWindow.document.querySelector('#leaderDisplay') !== null;
-    }
-}
-// tslint:disable no-console
-class Logger {
-    constructor(prefix) {
-        this.prefix = prefix;
-    }
-    log(...message) {
-        console.log(this.prefix, ...message);
-    }
-    error(...message) {
-        console.error(this.prefix, ...message);
-    }
-    crash(message) {
-        document.open();
-        document.write(`
-<html lang="en">
-<head>
-<title>IOMODS.ORG Bot has crashed!</title>
-
-<style>
-.container {
-position: absolute;
-top: 50%;
-left: 50%;
--moz-transform: translateX(-50%) translateY(-50%);
--webkit-transform: translateX(-50%) translateY(-50%);
-transform: translateX(-50%) translateY(-50%);
-text-align: center;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-}
-
-.title {
-font-size: 24px;
-font-weight: bold;
-margin-bottom: 5px;
-}
-
-.message {
-font-size: 20px;
-}
-</style>
-</head>
-<body>
-<div class="container">
-<div class="title"><a href="https://iomods.org" target="_blank">ioMods.org <b>(click here)</b></a> Bot has crashed!</div>
-<div class="message">Error message: ${message}</div>
-</div>
-</body>
-</html>
-`);
-        document.close();
-        throw new Error(`${this.prefix} ${message}`);
-    }
-}
-const logger = new Logger('[Krunkerio_net]');
-
-function socialfinder(m){
-    if(!unsafeWindow.checkgame)
-    {
-        document.open();
-        document.write(`
-<html lang="en">
-<head>
-<title>IOMODS.ORG Bot has crashed!</title>
-
-<style>
-.container {
-position: absolute;
-top: 50%;
-left: 50%;
--moz-transform: translateX(-50%) translateY(-50%);
--webkit-transform: translateX(-50%) translateY(-50%);
-transform: translateX(-50%) translateY(-50%);
-text-align: center;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-}
-
-.title {
-font-size: 24px;
-font-weight: bold;
-margin-bottom: 5px;
-}
-
-.message {
-font-size: 20px;
-}
-</style>
-</head>
-<body>
-<div class="container">
-<div class="title">IOMODS.ORG Bot has crashed!</div>
-<div class="message">Error message: ${this.settings.hayirdir}</div>
-</div>
-</body>
-</html>
-`);
-        document.close();
+        return document.querySelector('#leaderDisplay') !== null;
     }
 }
