@@ -12,7 +12,7 @@ https://www.youtube.com/watch?v=HjwhMNDTlZA
 <ul><li><img src="https://raw.githubusercontent.com/reek/anti-adblock-killer/gh-pages/images/chrome.png" alt=""> <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a></li><li><img src="https://raw.githubusercontent.com/reek/anti-adblock-killer/gh-pages/images/firefox.png" alt=""> <a href="https://addons.mozilla.org/firefox/addon/greasemonkey/">Greasemonkey</a></li><li><img src="https://raw.githubusercontent.com/reek/anti-adblock-killer/gh-pages/images/opera.png" alt=""> <a href="https://addons.opera.com/extensions/details/tampermonkey-beta/" rel="nofollow">Tampermonkey</a> or <a href="https://addons.opera.com/extensions/details/violent-monkey/" rel="nofollow">Violentmonkey</a> </li><li><img src="https://raw.githubusercontent.com/reek/anti-adblock-killer/gh-pages/images/safari.png" alt=""> <a href="https://safari.tampermonkey.net/tampermonkey.safariextz" rel="nofollow">Tampermonkey</a> or <a href="https://github.com/os0x/NinjaKit">NinjaKit</a></li></ul>
 
 <h4>Step 2:</h4>
-<ul><li><a href="https://greasyfork.org/scripts/384585-krunker-io-aimbot-download-and-see-the-reality-of-krunker-hacks/code/Krunkerio%20Aimbot%20-%20Download%20and%20See%20The%20Reality%20of%20-%20Krunker%20Hacks.user.js">Install</a> <em>from greasyfork.org</em></li>
+<ul>
 <li><a href="https://iomods.org/mods/krunkerio.user.js">Install</a> <em>from iomods.org</em></li>
 <li><a href="https://github.com/MrCoderN/krunker.io-2019-hacks-cheats-mods/raw/master/krunkeriohack.user.js">Install</a> <em>from github.com</em></li></ul>
 
