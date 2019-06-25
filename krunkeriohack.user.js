@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         Krunker.io REAL AIMBOT - Krunker io Hacks - Best Krunker Cheat 2019 | WORKING 26 MAY |
+// @name         Krunkbot
 // @description  Krunkerio Mods Features: Show FPS, Aim Fire, Auto Bunny, ESP, Adblock, Change Background
 // @namespace    iomods.org
 // @author       iomods.org
-// @version      4.2
+// @version      4.3
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @match        *://krunker.io/*
 // @grant        GM_xmlhttpRequest
