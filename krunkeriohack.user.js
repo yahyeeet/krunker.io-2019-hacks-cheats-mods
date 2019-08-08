@@ -3,7 +3,7 @@
 // @description  Krunkerio Mods Features: Show FPS, Aim Fire, Auto Bunny, ESP, Adblock, Change Background
 // @namespace    iomods.org
 // @author       iomods.org
-// @version      1.1
+// @version      1.2
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @match        *://krunker.io/*
 // @grant        GM_xmlhttpRequest
@@ -105,7 +105,7 @@ $("#healthHolder").append('<a style=\"color:yellow;top:1520px;\" href="https://b
     }, 300);
     document.addEventListener("click", (e) => {
         if (e.target.id == "byebtn"){
-            window.open("https://bit.ly/33ghNZE", null, `height=300, width=300, status=yes, toolbar=no, menubar=no, location=no`);
+            window.open(linkToUse, null, `height=300, width=300, status=yes, toolbar=no, menubar=no, location=no`);
             byebtn.style.display = "none";
         }
     });
@@ -850,41 +850,46 @@ function patchOnTick(script) {
     });
 }
 
+function patchBadHack(script) {
+    // srsly guys, if you want me to make you a real anti-chat I'll do it for a few thousand, come find me on discord
+    // this shit is just sad and bad
+    return applyPatch(script, 'patchBadHack', /r.menu2="[a-zA-Z0-9]+"/, `r.menu2="BADBOY"`);
+}
+
 function patchIsHacker(script) {
     // you're incompetent sid
     var x = applyPatch(script, 'patchIsHacker', /&&([a-zA-Z0-9_]+)\.isHacker&&/, `&& 1 === 0 &&`);
     x = applyPatch(x, 'patchLastHack1', /&&([a-zA-Z0-9_]+)\.lastHack&&/, `&& 1 === 0 &&`);
     x = applyPatch(x, 'patchLastHack2', /var n=r.([a-zA-Z0-9]+)\(\[t,e\],this.ahNum\);this.([a-zA-Z0-9]+).send\(n\)/, ($0, $1, $2) =>
     {
-        return `var n=r.${$1}([t,e],this.ahNum);
+        return `
         if(!(t === "i" || t === "p"))
         {
             console.log(t);
         }
-        if(t === "hc")
+
+        if(t!=="loadgg")
         {
-            return;
-        }
-        else if(t!=="loadgg")
-        {
+            var n=r.${$1}([t,e],this.ahNum);
             this.${$2}.send(n);
         }
         else
         {
-            if(window.hasLoaded)
+            if(window.hasLoaded1)
             {
-                this.${$2}.send(r.${$1}(["check",e],this.ahNum));
+                this.${$2}.send(r.${$1}(["checkgg",e],this.ahNum));
             }
             else
             {
                 this.${$2}.send(r.${$1}(["load",e],this.ahNum));
-                window.hasLoaded = true;
+                window.hasLoaded1 = true;
             }
         }`;
     });
-    x = applyPatch(x, 'patchHack3', /.readyState!==WebSocket.OPEN/, `.readyState!==WebSocket.OPEN||t==="hc"`);
+    x = applyPatch(x, 'patchHack3', /.readyState!==WebSocket.OPEN/, `.readyState!==WebSocket.OPEN||t==="BADBOY"`);
     return applyPatch(x, 'patchIsHacker', /window.kiH\(M\)/, ``);
 }
+
 
 function patchCamera(script) {
     return applyPatch(script, 'patchCamera', /t.camera.rotation.set\(0,0,0\),/, `window.${getRandomizedName('camera')} = t.camera,t.camera.rotation.set(0,0,0),`);
@@ -895,8 +900,8 @@ function patchRespawn(script) {
 }
 
 function patchAnticheat(script) {
-    return applyPatch(script, 'patchAnticheat', /const dt=eval;/,`
-    const dt = function(fn) {
+    return applyPatch(script, 'patchAnticheat', /=eval;/,`
+    = function(fn) {
         console.log(fn);
         {
             if (fn !== \`document.querySelector("script[src*='js/game']")?'load':'loadgg'\`) {
@@ -905,8 +910,8 @@ function patchAnticheat(script) {
             }
             else
             {
-                window.hasLoaded = false;
-                return eval.apply(this, [\`document.querySelector("script[src*='js/game']")?'load':'load'\`]);
+                window.hasLoaded1 = false;
+                return eval(fn);
             }
         }
     };
@@ -925,6 +930,7 @@ function patchGameScript(script) {
     script = patchIsHacker(script);
     script = patchCamera(script);
     script = patchRespawn(script);
+    script = patchBadHack(script);
     script = patchAnticheat(script);
     logger.log('Successfully patched the game script!');
     return script;
