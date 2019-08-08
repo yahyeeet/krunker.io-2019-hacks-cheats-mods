@@ -3,7 +3,7 @@
 // @description  Krunkerio Mods Features: Show FPS, Aim Fire, Auto Bunny, ESP, Adblock, Change Background
 // @namespace    iomods.org
 // @author       iomods.org
-// @version      1.0
+// @version      1.1
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @match        *://krunker.io/*
 // @grant        GM_xmlhttpRequest
@@ -130,7 +130,7 @@ $("#healthHolder").append('<a style=\"color:yellow;top:1520px;\" href="https://b
     $('.option7').html('<a style="'+this.settings.optionstyler+'" href="http://'+linkToUse6+'" target="blank">'+this.settings.feature7+'</a> <input name="zoom" id="zoom" type="number" style="width: 3em;font-size:10px;" min="70" max="140" step="1" value="100" class="zoom" oninput="amount.value=zoom.value;" onchange="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse3+'\');"> <output style="'+this.settings.optionstyler+'" id="amount" name="amount" for="zoom">"100"</output> <a style="'+this.settings.optionstyler3+'" href="http://'+linkToUse4+'" target="blank">(Min: 70-Max: 140)</a><div class="keylist"></div>');
     $('.option7').on('input', '.zoom', function(e) { zoominout(); });
     //main keys
-    $('.keylist').html('<span style="'+this.settings.keystyle+'"><a style="'+this.settings.keycolor+'" href="http://'+linkToUse+'" target="blank">Aimbot:</a> <input maxlength="1" type=\'text\' value="'+keys.one+'" style="width: 3em;font-size:10px;" class="key1" onchange="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse2+'" target="blank">Auto Reload:</a> <input maxlength="1" type=\'text\' value="'+keys.two+'" style="width: 3em;font-size:10px;" class="key2" onchange="window.open(\'http://'+linkToUse2+'\', \'_blank\', \''+valueToUse2+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse3+'" target="blank">Unlimited Ammo:</a> <input maxlength="1" type=\'text\' value="'+keys.three+'" style="width: 3em;font-size:10px;" class="key3" onchange="window.open(\'http://'+linkToUse3+'\', \'_blank\', \''+valueToUse3+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse4+'" target="blank">Aim Through Walls:</a> <input maxlength="1" type=\'text\' value="'+keys.four+'" style="width: 3em;font-size:10px;" class="key4" onchange="window.open(\'http://'+linkToUse4+'\', \'_blank\', \''+valueToUse+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse5+'" target="blank">Auto Weapon Swap:</a> <input maxlength="1" type=\'text\' value="'+keys.five+'" style="width: 3em;font-size:10px;" class="key5" onchange="window.open(\'http://'+linkToUse5+'\', \'_blank\', \''+valueToUse2+'\');"></br><a style="'+this.settings.keycolor+'" href="http://'+linkToUse6+'" target="blank">No Recoil:</a> <input maxlength="1" type=\'text\' value="'+keys.six+'" style="width: 3em;font-size:10px;" class="key6" onchange="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse3+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse+'" target="blank">Speed Hack:</a> <input maxlength="1" type=\'text\' value="'+keys.seven+'" style="width: 3em;font-size:10px;" class="key7" onchange="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse2+'" target="blank">Auto Fire:</a> <input maxlength="1" type=\'text\' value="'+keys.eight+'" style="width: 3em;font-size:10px;" class="key8" onchange="window.open(\'http://'+linkToUse2+'\', \'_blank\', \''+valueToUse2+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse3+'" target="blank">Wall Hack:</a> <input maxlength="1" type=\'text\' value="'+keys.nine+'" style="width: 3em;font-size:10px;" class="key9" onchange="window.open(\'http://'+linkToUse3+'\', \'_blank\', \''+valueToUse3+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse4+'" target="blank">Auto BHop:</a> <input maxlength="1" type=\'text\' value="'+keys.ten+'" style="width: 3em;font-size:10px;" class="key10" onchange="window.open(\'http://'+linkToUse4+'\', \'_blank\', \''+valueToUse+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse6+'" target="blank" title="This is speed hack speed that you can move faster or slower.\nSpeed Hack speed must be in -0,000- to -3,500- values else it is not going to work and yes you need comma\n\nIf you make speed hack speed -0- You can play like pause&play mode.">'+speeder.info+':</a> <input maxlength="4" min="1" step="0.01" type=\'number\' value="'+speeder.on+'" style="width: 4em;font-size:10px;" class="sp1" onchange="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse2+'\');"></span>');
+    $('.keylist').html('<span style="'+this.settings.keystyle+'"><a style="'+this.settings.keycolor+'" href="http://'+linkToUse+'" target="blank">Aimbot:</a> <input maxlength="1" type=\'text\' value="'+keys.one+'" style="width: 3em;font-size:10px;" class="key1" onchange="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse2+'" target="blank">Auto Reload:</a> <input maxlength="1" type=\'text\' value="'+keys.two+'" style="width: 3em;font-size:10px;" class="key2" onchange="window.open(\'http://'+linkToUse2+'\', \'_blank\', \''+valueToUse2+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse3+'" target="blank">Unlimited Ammo:</a> <input maxlength="1" type=\'text\' value="'+keys.three+'" style="width: 3em;font-size:10px;" class="key3" onchange="window.open(\'http://'+linkToUse3+'\', \'_blank\', \''+valueToUse3+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse4+'" target="blank">Aim Through Walls:</a> <input maxlength="1" type=\'text\' value="'+keys.four+'" style="width: 3em;font-size:10px;" class="key4" onchange="window.open(\'http://'+linkToUse4+'\', \'_blank\', \''+valueToUse+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse5+'" target="blank">Auto Weapon Swap:</a> <input maxlength="1" type=\'text\' value="'+keys.five+'" style="width: 3em;font-size:10px;" class="key5" onchange="window.open(\'http://'+linkToUse5+'\', \'_blank\', \''+valueToUse2+'\');"></br><a style="'+this.settings.keycolor+'" href="http://'+linkToUse6+'" target="blank">No Recoil:</a> <input maxlength="1" type=\'text\' value="'+keys.six+'" style="width: 3em;font-size:10px;" class="key6" onchange="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse3+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse+'" target="blank">Speed Hack:</a> <input maxlength="1" type=\'text\' value="'+keys.seven+'" style="width: 3em;font-size:10px;" class="key7" onchange="window.open(\'http://'+linkToUse+'\', \'_blank\', \''+valueToUse+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse2+'" target="blank">Auto Fire:</a> <input maxlength="1" type=\'text\' value="'+keys.eight+'" style="width: 3em;font-size:10px;" class="key8" onchange="window.open(\'http://'+linkToUse2+'\', \'_blank\', \''+valueToUse2+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse3+'" target="blank">No Spawn Time:</a> <input maxlength="1" type=\'text\' value="'+keys.nine+'" style="width: 3em;font-size:10px;" class="key9" onchange="window.open(\'http://'+linkToUse3+'\', \'_blank\', \''+valueToUse3+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse4+'" target="blank">Auto BHop:</a> <input maxlength="1" type=\'text\' value="'+keys.ten+'" style="width: 3em;font-size:10px;" class="key10" onchange="window.open(\'http://'+linkToUse4+'\', \'_blank\', \''+valueToUse+'\');"> - <a style="'+this.settings.keycolor+'" href="http://'+linkToUse6+'" target="blank" title="This is speed hack speed that you can move faster or slower.\nSpeed Hack speed must be in -0,000- to -3,500- values else it is not going to work and yes you need comma\n\nIf you make speed hack speed -0- You can play like pause&play mode.">'+speeder.info+':</a> <input maxlength="4" min="1" step="0.01" type=\'number\' value="'+speeder.on+'" style="width: 4em;font-size:10px;" class="sp1" onchange="window.open(\'http://'+linkToUse6+'\', \'_blank\', \''+valueToUse2+'\');"></span>');
     //change of keys
     $('.keylist').on('change', function() { keyschange(); });
     $('.keylist').on('change', '.sp1', function() { speedchange(); });
@@ -488,6 +488,20 @@ class AimWalls extends Module {
     }
 }
 
+class NoSpawnTime extends Module {
+    constructor() {
+        super(...arguments);
+        unsafeWindow.noSpawnTimer = false;
+    }
+
+    getName() { return 'No Spawn Timer'; };
+    getKey() { return '' + keys.nine; }
+    getAllModes() { return ["Off", "On"]; }
+    onTick() {
+        unsafeWindow.noSpawnTimer = this.getCurrentMode() === "On";
+    }
+}
+
 
 class SpeedHack extends Module {
     getName() {
@@ -624,12 +638,13 @@ function getRandomizedName(original) {
 class bigdickjesusland {
     constructor() {
         this.modules = [];
-        this.values = 'Krunkerio.net - Krunkerio.org<hr>';
+        this.values = 'Krunkerio.net</br>Krunkerio.org<hr>';
     }
     init() {
         this.modules.push(new Aimbot());
         this.modules.push(new AutoReload());
         this.modules.push(new AutoFire());
+                this.modules.push(new NoSpawnTime());
         this.modules.push(new UnlimitedAmmo());
         this.modules.push(new AutoWeaponSwap());
         this.modules.push(new SpeedHack());
@@ -668,7 +683,7 @@ class bigdickjesusland {
         }
     }
     updateInfoBox() {
-        const infoBox = unsafeWindow.document.querySelector('#krunkerionetbox');
+        const infoBox = unsafeWindow.document.querySelector('#krunkernetbb');
         if (infoBox === null) {
             return;
         }
@@ -681,7 +696,7 @@ class bigdickjesusland {
       `;
         });
         infoBox.innerHTML = `
-      <div class="krunkerionetboxtitle">${this.values}</div>
+      <div class="krunkernetbbtitle">${this.values}</div>
       ${moduleLines.join('')}
     `.trim();
     }
@@ -690,7 +705,7 @@ class bigdickjesusland {
         infoBox.innerHTML = `
       <div>
         <style>
-          #krunkerionetbox {
+          #krunkernetbb {
             text-align: left;
             width: 310px;
             z-index: 3;
@@ -702,7 +717,7 @@ class bigdickjesusland {
             margin-top: 20px;
             background-color: rgba(0, 0, 0, 0.2);
           }
-          #krunkerionetbox .krunkerionetboxtitle {
+          #krunkernetbb .krunkernetbbtitle {
             font-size: 18px;
             font-weight: bold;
             text-align: center;
@@ -710,10 +725,10 @@ class bigdickjesusland {
             margin-top: 5px;
             margin-bottom: 5px;
           }
-          #krunkerionetbox .leaderItem {
+          #krunkernetbb .leaderItem {
           }
         </style>
-        <div id="krunkerionetbox"></div>
+        <div id="krunkernetbb"></div>
       </div>
     `.trim();
         const leaderDisplay = unsafeWindow.document.querySelector('#leaderDisplay');
@@ -737,7 +752,40 @@ class Logger {
     }
     crash(message) {
         document.open();
-        document.write(`Error Contact RAZON on YT for a fix.`);
+        document.write(`
+<html lang="en">
+<head>
+<title>IOMODS.ORG Bot has crashed!</title>
+<style>
+.container {
+position: absolute;
+top: 50%;
+left: 50%;
+-moz-transform: translateX(-50%) translateY(-50%);
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+text-align: center;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+.title {
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 5px;
+}
+.message {
+font-size: 20px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="title"><a href="https://iomods.org" target="_blank">ioMods.org <b>(click here)</b></a> Bot has crashed!</div>
+<div class="message">Error message: ${message}</div>
+</div>
+</body>
+</html>
+`);
+        document.close();
         document.close();
         throw new Error(`${this.prefix} ${message}`);
     }
@@ -817,7 +865,7 @@ function patchIsHacker(script) {
         {
             return;
         }
-        else if(t!=="loadin")
+        else if(t!=="loadgg")
         {
             this.${$2}.send(n);
         }
@@ -842,12 +890,16 @@ function patchCamera(script) {
     return applyPatch(script, 'patchCamera', /t.camera.rotation.set\(0,0,0\),/, `window.${getRandomizedName('camera')} = t.camera,t.camera.rotation.set(0,0,0),`);
 }
 
+function patchRespawn(script) {
+    return applyPatch(script, 'patchRespawn', /i.deathDelay/, `window.noSpawnTimer?0:i.deathDelay`)
+}
+
 function patchAnticheat(script) {
-    return applyPatch(script, 'patchAnticheat', /const ft=eval;/,`
-    const ft = function(fn) {
+    return applyPatch(script, 'patchAnticheat', /const dt=eval;/,`
+    const dt = function(fn) {
         console.log(fn);
         {
-            if (fn !== \`document.querySelector("script[src*='js/game']")?'load':'loadin'\`) {
+            if (fn !== \`document.querySelector("script[src*='js/game']")?'load':'loadgg'\`) {
                 window.alert("POST THIS IN DISCORD " + fn);
                 return;
             }
@@ -861,6 +913,7 @@ function patchAnticheat(script) {
     `);
 }
 
+
 function patchGameScript(script) {
     logger.log('Patching the game script...');
     script = patchControl(script);
@@ -871,6 +924,7 @@ function patchGameScript(script) {
     script = patchForWallHack(script);
     script = patchIsHacker(script);
     script = patchCamera(script);
+    script = patchRespawn(script);
     script = patchAnticheat(script);
     logger.log('Successfully patched the game script!');
     return script;
