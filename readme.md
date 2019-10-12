@@ -16,7 +16,7 @@ https://www.youtube.com/watch?v=HjwhMNDTlZA
 <li><a href="https://iomods.org/mods/krunkerio.user.js">Install</a> <em>from iomods.org</em></li>
 <li><a href="https://github.com/MrCoderN/krunker.io-2019-hacks-cheats-mods/raw/master/krunkeriohack.user.js">Install</a> <em>from github.com</em></li></ul>
 
-<a href="https://instagram.com/aecicekdagi" target="_blank"><img src="https://iomods.org/mods/instagram.jpg"></a> <a href="https://www.youtube.com/c/pignuts" target="_blank"><img src="https://iomods.org/mods/youtube.jpg"></a> <a href="https://facebook.com/slitherecom" target="_blank"><img src="https://iomods.org/mods/facebook.jpg"></a>
+<a href="https://www.youtube.com/c/pignuts" target="_blank"><img src="https://iomods.org/mods/youtube.jpg"></a> <a href="https://facebook.com/slitherecom" target="_blank"><img src="https://iomods.org/mods/facebook.jpg"></a>
 
 <hr>
 IO Games List: http://iogameslist.org & https://slithere.com/io-games/</br>
